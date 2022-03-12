@@ -11,5 +11,8 @@ $govuk-new-link-styles: true;
 // GOV.UK Prototype components
 @import "govuk-prototype-components/x-govuk/all";
 
+// Govspeak
+@import "marked-govspeak/govspeak/all";
+
 // Components
 @import "app/components/all";
