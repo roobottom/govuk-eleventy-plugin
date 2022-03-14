@@ -63,7 +63,7 @@
   <div class="govuk-breadcrumbs govuk-!-display-none-print">
   <ol class="govuk-breadcrumbs__list">
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="/">Home</a>
+      <a class="govuk-breadcrumbs__link" href="/">GOV.UK Eleventy</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
       <a class="govuk-breadcrumbs__link" href="/example-layouts/">Example layouts</a>
@@ -86,13 +86,33 @@
   <div class="app-article__body">    <p class="govuk-body">The <code class="x-govuk-code x-govuk-code--inline">page</code> layout is the simplest of layouts available. It is designed to allow maximum flexibility of the layout and type of page content.</p>
 <h2 class="govuk-heading-m" id="front-matter-properties">Front matter properties</h2><pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--yaml" tabindex="0"><code><span class="x-govuk-code__attr">layout:</span> <span class="x-govuk-code__string">page</span>
 <span class="x-govuk-code__attr">title:</span> <span class="x-govuk-code__comment"># Appears at the top of the page and in the &lt;title&gt;</span>
-<span class="x-govuk-code__attr">description:</span> <span class="x-govuk-code__comment"># Appears below page title and in page &lt;meta&gt;</span></code></pre>
+<span class="x-govuk-code__attr">description:</span> <span class="x-govuk-code__comment"># Appears below page title and in page &lt;meta&gt;</span>
+<span class="x-govuk-code__attr">related:</span> <span class="x-govuk-code__comment"># Optional. Related links appear in sidebar</span>
+  <span class="x-govuk-code__attr">title:</span> <span class="x-govuk-code__comment"># Defaults to ‘Related links’</span>
+  <span class="x-govuk-code__bullet">-</span> <span class="x-govuk-code__attr">text:</span> <span class="x-govuk-code__comment"># Title of related link</span>
+    <span class="x-govuk-code__attr">href:</span> <span class="x-govuk-code__comment"># URL for related link</span></code></pre>
 
 </div>
 
 </article>
 
   
+<div class="x-govuk-related-navigation">
+    <nav class="x-govuk-related-navigation__nav-section" role="navigation" aria-labelledby="related-nav-related-links">
+      <h2 class="x-govuk-related-navigation__main-heading" id="related-nav-related_items-related-links">
+        Related links
+      </h2>
+        <ul class="x-govuk-related-navigation__link-list">
+            <li class="x-govuk-related-navigation__link">
+              <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="#">Another page</a>
+            </li>
+            <li class="x-govuk-related-navigation__link">
+              <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="#">Yet another page</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
         </main>
       </div>
 
