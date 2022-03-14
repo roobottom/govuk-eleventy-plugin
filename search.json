@@ -12,7 +12,7 @@
       "title": "Example layouts",
 "section": "GOV.UK Eleventy",      "layout": "side-navigation"
     },
-    "date": "2022-03-14T17:45:04.034Z",
+    "date": "2022-03-14T17:46:59.931Z",
     "dateString": "14 March 2022",
     "templateContent": "post   date based collection pages page simple product with side navigation",
     "url": "/govuk-eleventy-plugin/example-layouts/"
@@ -21,16 +21,25 @@
       "title": "Get started",
 "section": "GOV.UK Eleventy",      "layout": "side-navigation"
     },
-    "date": "2022-03-14T17:45:04.034Z",
+    "date": "2022-03-14T17:46:59.931Z",
     "dateString": "14 March 2022",
     "templateContent": "gov.uk eleventy plugin static site generator uses govuk frontend components provides support markdown formatted documents sets nunjucks template language marked.js render with extensions ensure text shares same styles those used adds search feature generates assets requirements node.js v16 v1.0.0 above node version manager recommended are working across multiple projects that use different versions installation first install this plugin: npm @11ty save next add .eleventy.js file root directory your project configure const govukeleventyplugin = require &#x27 plugin&#x27 module exports function eleventyconfig { register addplugin return dir : layouts from node_modules app layouts&#x27 } generate following command: npx serve once all files have been generated url will shown which can enter into address bar usually http: localhost:8080 whenever new page edit existing browser automatically refresh any changes applied create now ready start adding pages made 2 parts: front matter its contents starts ends written using key value data format called yaml most cases only need bits information: layout title example: layout: title: built `govuk plugin` named index.md content visit see appearing style choose 5 layouts: post   date based collection simple product side navigation",
     "url": "/govuk-eleventy-plugin/get-started/"
   },  {
     "data": {
+      "title": "Build documentation websites using Markdown and GOV.UK styles",
+"description": "The familiarity of the [GOV.UK Design System](https://design-system.service.gov.uk) combined with the simplicity of the [Eleventy](https://www.11ty.dev) static site generator.",      "layout": "product"
+    },
+    "date": "2022-03-14T17:46:59.931Z",
+    "dateString": "14 March 2022",
+    "templateContent": "about gov.uk eleventy plugin 11ty static site generator uses styles provides support markdown formatted documents options several that allow customise appearance your website see layouts 5 different browse",
+    "url": "/govuk-eleventy-plugin/"
+  },  {
+    "data": {
       "title": "Extended Markdown syntax",
 "section": "GOV.UK Eleventy",      "layout": "side-navigation"
     },
-    "date": "2022-03-14T17:45:04.034Z",
+    "date": "2022-03-14T17:46:59.931Z",
     "dateString": "14 March 2022",
     "templateContent": "strike through task list lists allow create items with checkboxes checkbox add brackets space start item show selected x between 1 write press release 2 update website 3 contact media fenced code block fences sample text here.. syntax highlighting var foo = function bar { return bar++ } console log 5 tables option description data path files supply that will passed into templates engine used processing handlebars default ext extension dest right aligned columns typographic replacements 4 2.4 &lt bonjour!&gt &gt c r tm p + &quot smartypants double quotes&quot &#x27 single quotes&#x27 en dash em ellipses.. quotes — ellipses… subscript h o superscript 19 th inserted marked footnotes simple footnote longer one big note definition term : lazy continuation inline markup some part third paragraph abbreviations this html abbreviation example converts keep intact partial entries like xxxhtmlyyy * hyper language first ↩ multiple paragraphs indent include them many",
     "url": "/govuk-eleventy-plugin/markdown-extented/"
@@ -39,7 +48,7 @@
       "title": "Basic Markdown syntax",
 "description": "Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents.","section": "GOV.UK Eleventy",      "layout": "side-navigation"
     },
-    "date": "2022-03-14T17:45:04.038Z",
+    "date": "2022-03-14T17:46:59.931Z",
     "dateString": "14 March 2022",
     "templateContent": "headings create heading add number signs # front word phrase use should correspond level example three &lt h3&gt e.g. ### header markdown rendered output 1 ## 2 3 #### 4 ##### 5 ###### 6 paragraphs blank line separate one more lines text this first paragraph second | breaks break new br&gt end with two spaces then type return emphasis emphasise asterisk underscore before after gds style guide recommends against italics transport font provide italic single quotation referring document scheme initiative *emphasised* emphasised _emphasised_ strong bold asterisks underscores only using emboldened when from interfaces technical documentation instructions **strongly emphasised** strongly __strongly emphasised__ blockquotes blockquote &gt dorothy followed her through many beautiful rooms castle looks like this: multiple can contain between witch bade clean pots kettles sweep floor keep fire fed wood nested want nest other elements formatted all used — need experiment see which ones work quarterly results revenue chart profits were higher than ever everything going according **plan** plan lists organize items into ordered unordered list numbers by periods have numerical order start item indented third dashes * plus + indent nesting different types also vice versa starting period backslash \\ escape 1968\\ great year! think 1969 best 1968 code spans denote enclose backticks ``` command prompt `npm install` npm install blocks every block least four tab console.log &#x27 hello world!&#x27 'hello world!' horizontal rules rule *** ___ themselves __ _ identical: links link title autolinked text: https: www.gov.uk images image exclamation mark ! alternative brackets path url asset parentheses optionally caption marks crown icon above words gov.uk assets govuk opengraph image.png &quot logo&quot logo linking apple touch 180x180.png visit gov.uk&quot",
     "url": "/govuk-eleventy-plugin/markdown/"
@@ -48,25 +57,16 @@
       "title": "Plugin options",
 "description": "The plugin provides several options that allow you to customise the appearance of your website.","section": "GOV.UK Eleventy",      "layout": "side-navigation"
     },
-    "date": "2022-03-14T17:45:04.038Z",
+    "date": "2022-03-14T17:46:59.931Z",
     "dateString": "14 March 2022",
     "templateContent": "name type description homepageurl string url organisation linked default &#39 organisationlogo logo that appears left set crown gov.uk shown royal arms coat false organisationname gov.uk&#39 productname product servicename service serviceurl value this links homekey label use first item pagination home&#39 searchindex location search index",
     "url": "/govuk-eleventy-plugin/options/"
   },  {
     "data": {
-      "title": "Build documentation websites using Markdown and GOV.UK styles",
-"description": "The familiarity of the [GOV.UK Design System](https://design-system.service.gov.uk) combined with the simplicity of the [Eleventy](https://www.11ty.dev) static site generator.",      "layout": "product"
-    },
-    "date": "2022-03-14T17:45:04.034Z",
-    "dateString": "14 March 2022",
-    "templateContent": "about gov.uk eleventy plugin 11ty static site generator uses styles provides support markdown formatted documents options several that allow customise appearance your website see layouts 5 different browse",
-    "url": "/govuk-eleventy-plugin/"
-  },  {
-    "data": {
       "title": "Collection",
 "description": "A collection of pages","section": "Example layouts",      "layout": "collection"
     },
-    "date": "2022-03-14T17:45:04.034Z",
+    "date": "2022-03-14T17:46:59.931Z",
     "dateString": "14 March 2022",
     "templateContent": "collection layout designed listing documents front matter properties layout: title: # appears top page &lt title&gt description: below title meta&gt related: optional related links appear sidebar defaults text: link href: url collection: name pagination: data: show size: number items each",
     "url": "/govuk-eleventy-plugin/example-layouts/collection/"
@@ -75,7 +75,7 @@
       "title": "Page",
 "description": "A simple page","section": "Example layouts",      "layout": "page"
     },
-    "date": "2022-03-14T17:45:04.034Z",
+    "date": "2022-03-14T17:46:59.931Z",
     "dateString": "14 March 2022",
     "templateContent": "page layout simplest layouts available designed allow maximum flexibility type content front matter properties layout: title: # appears top &lt title&gt description: below title meta&gt related: optional related links appear sidebar defaults text: link href: url",
     "url": "/govuk-eleventy-plugin/example-layouts/page/"
@@ -84,7 +84,7 @@
       "title": "Product",
 "description": "A product page","section": "Example layouts",      "layout": "product"
     },
-    "date": "2022-03-14T17:45:04.034Z",
+    "date": "2022-03-14T17:46:59.931Z",
     "dateString": "14 March 2022",
     "templateContent": "product layout designed home pages based page example front matter properties layout: title: description: # optional startbutton: text: href: image: src: location hero image alt: textual alternative",
     "url": "/govuk-eleventy-plugin/example-layouts/product/"
@@ -93,7 +93,7 @@
       "title": "Page with side navigation",
 "description": "A page with side navigation","section": "Example layouts",      "layout": "side-navigation"
     },
-    "date": "2022-03-14T17:45:04.034Z",
+    "date": "2022-03-14T17:46:59.931Z",
     "dateString": "14 March 2022",
     "templateContent": "side navigation layout with left page front matter properties layout: title: # appears top &lt title&gt description: below title meta&gt",
     "url": "/govuk-eleventy-plugin/example-layouts/side-navigation/"
