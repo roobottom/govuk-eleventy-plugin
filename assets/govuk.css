@@ -8143,10 +8143,10 @@ a:focus .x-govuk-code--inline {
   padding-right: 0;
 }
 
-.app-header__logotype-royal-arms {
+.app-header__logotype--large {
   margin: -2px 0 -8px;
 }
-.govuk-header__link--homepage:hover .app-header__logotype-royal-arms {
+.govuk-header__link--homepage:hover .app-header__logotype--large {
   background-color: #0b0c0c;
 }
 
