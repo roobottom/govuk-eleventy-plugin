@@ -102,31 +102,43 @@
     <h1 class="app-article__title govuk-heading-xl">Extended Markdown syntax</h1>
   </header>
 
-  <div class="app-article__body">        <h2 class="govuk-heading-m" id="strike-through">Strike-through</h2><p class="govuk-body"><del>Strike-through</del></p>
-<h2 class="govuk-heading-m" id="task-list">Task list</h2><p class="govuk-body">Task lists allow you to create a list of items with checkboxes. To create a checkbox, add brackets with a space (<code class="x-govuk-code x-govuk-code--inline">[ ]</code>) at the start of a list item. To show a selected checkbox, add an <code class="x-govuk-code x-govuk-code--inline">x</code> in between the brackets (<code class="x-govuk-code x-govuk-code--inline">[x]</code>).</p>
+  <div class="app-article__body">        <h2 id="strike-through" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#strike-through" class="govuk-link">Strike-through</a></h2>
+<p class="govuk-body"><s>Strike-through</s></p>
+<h2 id="task-list" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#task-list" class="govuk-link">Task list</a></h2>
+<p class="govuk-body">Task lists allow you to create a list of items with checkboxes. To create a checkbox, add brackets with a space (<code>[ ]</code>) at the start of a list item. To show a selected checkbox, add an <code>x</code> in between the brackets (<code>[x]</code>).</p>
 <pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--markdown" tabindex="0"><code><span class="x-govuk-code__bullet">1.</span> [x] Write the press release
 <span class="x-govuk-code__bullet">2.</span> [ ] Update the website
-<span class="x-govuk-code__bullet">3.</span> [ ] Contact the media</code></pre>
-<ol class="govuk-list govuk-list--number"><li><span class="x-govuk-checkbox"><input class="x-govuk-checkbox__input" type="checkbox" checked disabled><span class="x-govuk-checkbox__pseudo"></span></span>Write the press release</li>
-<li><span class="x-govuk-checkbox"><input class="x-govuk-checkbox__input" type="checkbox" disabled><span class="x-govuk-checkbox__pseudo"></span></span>Update the website</li>
-<li><span class="x-govuk-checkbox"><input class="x-govuk-checkbox__input" type="checkbox" disabled><span class="x-govuk-checkbox__pseudo"></span></span>Contact the media</li>
+<span class="x-govuk-code__bullet">3.</span> [ ] Contact the media
+</code></pre>
+
+<ol class="govuk-list govuk-list--number">
+<li>[x] Write the press release</li>
+<li>[ ] Update the website</li>
+<li>[ ] Contact the media</li>
 </ol>
-<h2 class="govuk-heading-m" id="fenced-code">Fenced code</h2><p class="govuk-body">Block code “fences”</p>
-<pre class="x-govuk-code x-govuk-code--block" tabindex="0">Sample text here...</pre>
+<h2 id="fenced-code" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#fenced-code" class="govuk-link">Fenced code</a></h2>
+<p class="govuk-body">Block code “fences”</p>
+<pre class="x-govuk-code x-govuk-code--block" tabindex="0">Sample text here...
+</pre>
+
 <p class="govuk-body">Syntax highlighting</p>
 <pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--js" tabindex="0"><code><span class="x-govuk-code__keyword">var</span> foo = <span class="x-govuk-code__keyword">function</span> (<span class="x-govuk-code__params">bar</span>) {
   <span class="x-govuk-code__keyword">return</span> bar++;
 };
 
-<span class="x-govuk-code__variable language_">console</span>.<span class="x-govuk-code__title function_">log</span>(<span class="x-govuk-code__title function_">foo</span>(<span class="x-govuk-code__number">5</span>));</code></pre>
-<h2 class="govuk-heading-m" id="tables">Tables</h2><table class="govuk-table">
+<span class="x-govuk-code__variable language_">console</span>.<span class="x-govuk-code__title function_">log</span>(<span class="x-govuk-code__title function_">foo</span>(<span class="x-govuk-code__number">5</span>));
+</code></pre>
+
+<h2 id="tables" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#tables" class="govuk-link">Tables</a></h2>
+<table class="govuk-table">
 <thead class="govuk-table__head">
 <tr class="govuk-table__row">
 <th class="govuk-table__header">Option</th>
 <th class="govuk-table__header">Description</th>
 </tr>
 </thead>
-<tbody class="govuk-table__body"><tr class="govuk-table__row">
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">
 <td class="govuk-table__cell">data</td>
 <td class="govuk-table__cell">path to data files to supply the data that will be passed into templates.</td>
 </tr>
@@ -144,25 +156,27 @@
 <table class="govuk-table">
 <thead class="govuk-table__head">
 <tr class="govuk-table__row">
-<th class="govuk-table__header govuk-!-text-align-right">Option</th>
-<th class="govuk-table__header govuk-!-text-align-right">Description</th>
+<th style="text-align:right" class="govuk-table__header">Option</th>
+<th style="text-align:right" class="govuk-table__header">Description</th>
 </tr>
 </thead>
-<tbody class="govuk-table__body"><tr class="govuk-table__row">
-<td class="govuk-table__cell govuk-!-text-align-right">data</td>
-<td class="govuk-table__cell govuk-!-text-align-right">path to data files to supply the data that will be passed into templates.</td>
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">
+<td style="text-align:right" class="govuk-table__cell">data</td>
+<td style="text-align:right" class="govuk-table__cell">path to data files to supply the data that will be passed into templates.</td>
 </tr>
 <tr class="govuk-table__row">
-<td class="govuk-table__cell govuk-!-text-align-right">engine</td>
-<td class="govuk-table__cell govuk-!-text-align-right">engine to be used for processing templates. Handlebars is the default.</td>
+<td style="text-align:right" class="govuk-table__cell">engine</td>
+<td style="text-align:right" class="govuk-table__cell">engine to be used for processing templates. Handlebars is the default.</td>
 </tr>
 <tr class="govuk-table__row">
-<td class="govuk-table__cell govuk-!-text-align-right">ext</td>
-<td class="govuk-table__cell govuk-!-text-align-right">extension to be used for dest files.</td>
+<td style="text-align:right" class="govuk-table__cell">ext</td>
+<td style="text-align:right" class="govuk-table__cell">extension to be used for dest files.</td>
 </tr>
 </tbody>
 </table>
-<h2 class="govuk-heading-m" id="typographic-replacements">Typographic replacements</h2><pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--markdown" tabindex="0"><code>1/2 1/3 2/3 1/4 3/4
+<h2 id="typographic-replacements" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#typographic-replacements" class="govuk-link">Typographic replacements</a></h2>
+<pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--markdown" tabindex="0"><code>1/2 1/3 2/3 1/4 3/4
 
 4 x 2.4
 
@@ -173,45 +187,62 @@
 &quot;Smartypants, double quotes&quot;, &#x27;single quotes&#x27;,
 -- en-dash and --- em-dash
 
-And ellipses...</code></pre>
-<p class="govuk-body">1/2 1/3 2/3 1/4 3/4</p>
-<p class="govuk-body">1/2 x 3/4</p>
-<p class="govuk-body">4 x 2.4</p>
-<p class="govuk-body">&lt;&lt;Bonjour!&gt;&gt;</p>
-<p class="govuk-body">(c) (C) (r) (R) (tm) (TM) (p) (P) +-</p>
-<p class="govuk-body">“Smartypants, double quotes”, ‘single quotes’,
+And ellipses...
+</code></pre>
+
+<p class="govuk-body">½ ⅓ ⅔ ¼ ¾</p>
+<p class="govuk-body">½ × ¾</p>
+<p class="govuk-body">4 × 2.4</p>
+<p class="govuk-body">«Bonjour!»</p>
+<p class="govuk-body">© © ® ® ™ ™ § § ±</p>
+<p class="govuk-body">“Smartypants, double quotes”, ‘single quotes’,<br>
 – en-dash and — em-dash</p>
 <p class="govuk-body">And ellipses…</p>
-<h2 class="govuk-heading-m" id="subscript">Subscript</h2><ul class="govuk-list govuk-list--bullet"><li>H<sub>2</sub>O</li>
+<h2 id="subscript" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#subscript" class="govuk-link">Subscript</a></h2>
+<ul class="govuk-list govuk-list--bullet">
+<li>H<sub>2</sub>O</li>
 </ul>
-<h2 class="govuk-heading-m" id="superscript">Superscript</h2><ul class="govuk-list govuk-list--bullet"><li>19<sup>th</sup></li>
+<h2 id="superscript" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#superscript" class="govuk-link">Superscript</a></h2>
+<ul class="govuk-list govuk-list--bullet">
+<li>19<sup>th</sup></li>
 </ul>
-<h2 class="govuk-heading-m" id="inserted-text">Inserted text</h2><p class="govuk-body"><ins>Inserted text</ins></p>
-<h2 class="govuk-heading-m" id="marked-text">Marked text</h2><p class="govuk-body"><mark>Marked text</mark></p>
-<h2 class="govuk-heading-m" id="footnotes">Footnotes</h2><p class="govuk-body">Here’s a simple footnote,<sup id="fnref:1"><a class="govuk-link" href="#fn:1" aria-describedby="footnotes-label">1</a></sup> and here’s a longer one.<sup id="fnref:big-note"><a class="govuk-link" href="#fn:big-note" aria-describedby="footnotes-label">big note</a></sup></p>
-<h2 class="govuk-heading-m" id="definition-lists">Definition lists</h2><p class="govuk-body">Term 1</p>
-<p class="govuk-body">: Definition 1
+<h2 id="inserted-text" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#inserted-text" class="govuk-link">Inserted text</a></h2>
+<p class="govuk-body"><ins>Inserted text</ins></p>
+<h2 id="marked-text" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#marked-text" class="govuk-link">Marked text</a></h2>
+<p class="govuk-body"><mark>Marked text</mark></p>
+<h2 id="footnotes" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#footnotes" class="govuk-link">Footnotes</a></h2>
+<p class="govuk-body">Here’s a simple footnote,<sup id="fnref:1"><a href="#fn:1" aria-describedby="footnotes-label">1</a></sup> and here’s a longer one.[^big note]</p>
+<p class="govuk-body">[^big note]: Here’s one with multiple paragraphs and code.</p>
+<pre class="govuk-inset-text govuk-!-margin-left-0"><code>Indent paragraphs to include them in the footnote.
+
+    { my code }
+
+Add as many paragraphs as you like.
+</code></pre>
+<h2 id="definition-lists" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#definition-lists" class="govuk-link">Definition lists</a></h2>
+<p class="govuk-body">Term 1</p>
+<p class="govuk-body">: Definition 1<br>
 with lazy continuation.</p>
 <p class="govuk-body">Term 2 with <em>inline markup</em></p>
 <p class="govuk-body">: Definition 2</p>
-<pre class="x-govuk-code x-govuk-code--block" tabindex="0">    { some code, part of Definition 2 }
+<pre class="govuk-inset-text govuk-!-margin-left-0"><code>    { some code, part of Definition 2 }
 
-Third paragraph of definition 2.</pre>
-<h2 class="govuk-heading-m" id="abbreviations">Abbreviations</h2><p class="govuk-body">This is HTML abbreviation example.</p>
-<p class="govuk-body">It converts “HTML”, but keep intact partial entries like “xxxHTMLyyy” and so on.</p>
-<p class="govuk-body">*[HTML]: Hyper Text Markup Language</p>
+Third paragraph of definition 2.
+</code></pre>
+<h2 id="abbreviations" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#abbreviations" class="govuk-link">Abbreviations</a></h2>
+<p class="govuk-body">This is <abbr title="Hyper Text Markup Language">HTML</abbr> abbreviation example.</p>
+<p class="govuk-body">It converts “<abbr title="Hyper Text Markup Language">HTML</abbr>”, but keep intact partial entries like “xxxHTMLyyy” and so on.</p>
 <footer>
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
       <h2 id="footnotes-label" class="govuk-visually-hidden">Footnotes</h2>
+
       <ol class="app-footnotes-list">
-        <li id="fn:1"><p class="govuk-body">This is the first footnote. <a href="#fnref:1" aria-label="Back to content">↩</a></p>
-</li><li id="fn:big-note"><p class="govuk-body">Here’s one with multiple paragraphs and code.</p>
-<p class="govuk-body">Indent paragraphs to include them in the footnote.</p>
-<pre class="x-govuk-code x-govuk-code--block" tabindex="0">{ my code }</pre>
-<p class="govuk-body">Add as many paragraphs as you like. <a href="#fnref:big-note" aria-label="Back to content">↩</a></p>
+<li id="fn:1"><p class="govuk-body">This is the first footnote. <a href="#fnref:1" aria-label="Back to content">↩︎</a></p>
 </li>
-      </ol>
-    </footer>
+</ol>
+</footer>
+
 </div>
 
 </article>
