@@ -102,7 +102,10 @@
     <h1 class="app-article__title govuk-heading-xl">Extended Markdown syntax</h1>
   </header>
 
-  <div class="app-article__body">        <h2 id="strike-through" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#strike-through" class="govuk-link">Strike-through</a></h2>
+  <div class="app-article__body">        <p class="govuk-body"><nav class="app-contents-list" aria-label="Contents" role="navigation">
+    <h2 class="app-contents-list__title">Contents</h2>
+<ul><li><a href="#strike-through">Strike-through</a></li><li><a href="#task-list">Task list</a></li><li><a href="#fenced-code">Fenced code</a></li><li><a href="#tables">Tables</a></li><li><a href="#typographic-replacements">Typographic replacements</a></li><li><a href="#subscript">Subscript</a></li><li><a href="#superscript">Superscript</a></li><li><a href="#inserted-text">Inserted text</a></li><li><a href="#marked-text">Marked text</a></li><li><a href="#footnotes">Footnotes</a></li><li><a href="#definition-lists">Definition lists</a></li><li><a href="#abbreviations">Abbreviations</a></li></ul></nav></p>
+<h2 id="strike-through" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#strike-through" class="govuk-link">Strike-through</a></h2>
 <p class="govuk-body"><s>Strike-through</s></p>
 <h2 id="task-list" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#task-list" class="govuk-link">Task list</a></h2>
 <p class="govuk-body">Task lists allow you to create a list of items with checkboxes. To create a checkbox, add brackets with a space (<code>[ ]</code>) at the start of a list item. To show a selected checkbox, add an <code>x</code> in between the brackets (<code>[x]</code>).</p>
@@ -220,15 +223,20 @@ And ellipses...
 Add as many paragraphs as you like.
 </code></pre>
 <h2 id="definition-lists" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#definition-lists" class="govuk-link">Definition lists</a></h2>
-<p class="govuk-body">Term 1</p>
-<p class="govuk-body">: Definition 1<br>
+<dl class="app-definition-list">
+<dt>Term 1</dt>
+<dd>
+<p class="govuk-body">Definition 1<br>
 with lazy continuation.</p>
-<p class="govuk-body">Term 2 with <em>inline markup</em></p>
-<p class="govuk-body">: Definition 2</p>
-<pre class="govuk-inset-text govuk-!-margin-left-0"><code>    { some code, part of Definition 2 }
-
-Third paragraph of definition 2.
+</dd>
+<dt>Term 2 with <em>inline markup</em></dt>
+<dd>
+<p class="govuk-body">Definition 2</p>
+<pre class="govuk-inset-text govuk-!-margin-left-0"><code>  { some code, part of Definition 2 }
 </code></pre>
+<p class="govuk-body">Third paragraph of definition 2.</p>
+</dd>
+</dl>
 <h2 id="abbreviations" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#abbreviations" class="govuk-link">Abbreviations</a></h2>
 <p class="govuk-body">This is <abbr title="Hyper Text Markup Language">HTML</abbr> abbreviation example.</p>
 <p class="govuk-body">It converts “<abbr title="Hyper Text Markup Language">HTML</abbr>”, but keep intact partial entries like “xxxHTMLyyy” and so on.</p>
