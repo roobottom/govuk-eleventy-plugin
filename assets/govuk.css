@@ -7946,8 +7946,8 @@ a:focus .x-govuk-code--inline {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.5;
+  padding-top: 15px;
   border-top: 1px solid #b1b4b6;
-  padding-top: 10px;
 }
 @media print {
   .app-article__footer {
@@ -7969,8 +7969,11 @@ a:focus .x-govuk-code--inline {
 }
 @media (min-width: 40.0625em) {
   .app-article__footer {
-    max-width: 66%;
+    padding-top: 20px;
   }
+}
+.app-article__footer .govuk-body-s {
+  color: #505a5f;
 }
 
 [class^=govuk-heading][tabindex] {
