@@ -181,6 +181,10 @@
 <h2 id="typographic-replacements" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#typographic-replacements" class="govuk-link">Typographic replacements</a></h2>
 <pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--markdown" tabindex="0"><code>1/2 1/3 2/3 1/4 3/4
 
+1/2 x 3/4
+
+6 =&gt; 4, 2 &lt;= 4
+
 4 x 2.4
 
 &lt;<span class="language-xml">&lt;Bonjour!&gt;</span>&gt;
@@ -195,6 +199,7 @@ And ellipses...
 
 <p class="govuk-body">½ ⅓ ⅔ ¼ ¾</p>
 <p class="govuk-body">½ × ¾</p>
+<p class="govuk-body">6 ≥ 4, 2 ≤ 4</p>
 <p class="govuk-body">4 × 2.4</p>
 <p class="govuk-body">«Bonjour!»</p>
 <p class="govuk-body">© © ® ® ™ ™ § § ±</p>
@@ -214,14 +219,8 @@ And ellipses...
 <h2 id="marked-text" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#marked-text" class="govuk-link">Marked text</a></h2>
 <p class="govuk-body"><mark>Marked text</mark></p>
 <h2 id="footnotes" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#footnotes" class="govuk-link">Footnotes</a></h2>
-<p class="govuk-body">Here’s a simple footnote,<sup id="fnref:1"><a href="#fn:1" aria-describedby="footnotes-label">1</a></sup> and here’s a longer one.[^big note]</p>
-<p class="govuk-body">[^big note]: Here’s one with multiple paragraphs and code.</p>
-<pre class="govuk-inset-text govuk-!-margin-left-0"><code>Indent paragraphs to include them in the footnote.
-
-    { my code }
-
-Add as many paragraphs as you like.
-</code></pre>
+<p class="govuk-body">Here is a footnote reference,<sup id="fnref:1"><a href="#fn:1" aria-describedby="footnotes-label">1</a></sup> and another.<sup id="fnref:2"><a href="#fn:2" aria-describedby="footnotes-label">2</a></sup></p>
+<p class="govuk-body">This paragraph won’t be part of the note, because it isn’t indented.</p>
 <h2 id="definition-lists" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#definition-lists" class="govuk-link">Definition lists</a></h2>
 <dl class="app-definition-list">
 <dt>Term 1</dt>
@@ -234,6 +233,8 @@ with lazy continuation.</p>
 <p class="govuk-body">Definition 2</p>
 <pre class="govuk-inset-text govuk-!-margin-left-0"><code>  { some code, part of Definition 2 }
 </code></pre>
+</dd>
+<dd>
 <p class="govuk-body">Third paragraph of definition 2.</p>
 </dd>
 </dl>
@@ -246,7 +247,18 @@ with lazy continuation.</p>
       <h2 id="footnotes-label" class="govuk-visually-hidden">Footnotes</h2>
 
       <ol class="app-footnotes-list">
-<li id="fn:1"><p class="govuk-body">This is the first footnote. <a href="#fnref:1" aria-label="Back to content">↩︎</a></p>
+<li id="fn:1"><p class="govuk-body">Here is the footnote. <a href="#fnref:1" aria-label="Back to content">↩︎</a></p>
+</li>
+<li id="fn:2"><p class="govuk-body">Here’s one with multiple blocks.</p>
+<p class="govuk-body">Subsequent paragraphs are indented to show that they<br>
+belong to the previous footnote.</p>
+<pre class="govuk-inset-text govuk-!-margin-left-0"><code>{ some.code }
+</code></pre>
+<p class="govuk-body">The whole paragraph can be indented, or just the first<br>
+line. In this way, multi-paragraph footnotes<sup id="fnref:3"><a href="#fn:3" aria-describedby="footnotes-label">3</a></sup> work like<br>
+multi-paragraph list items. <a href="#fnref:2" aria-label="Back to content">↩︎</a></p>
+</li>
+<li id="fn:3"><p class="govuk-body">Footnotes can have footnotes, too. <a href="#fnref:3" aria-label="Back to content">↩︎</a></p>
 </li>
 </ol>
 </footer>
