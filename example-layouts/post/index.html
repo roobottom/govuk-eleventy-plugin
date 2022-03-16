@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="/govuk-eleventy-plugin/assets/govuk.css">
 
   <meta property="og:title" content="Post">
-<meta property="og:description" name="description" content="A date-based post">    
+<meta property="og:description" name="description" content="A date-based post"><meta property="og:image" content="/govuk-eleventy-plugin/assets/images/govuk-opengraph-image.png"><meta property="og:image:alt" content="A crown icon above the words GOV.UK.">    
     
     <meta property="og:image" content="/assets/images/govuk-opengraph-image.png">
   </head>
@@ -84,14 +84,28 @@
     </h1>
   </header>
 
-  <div class="app-article__body">        <p class="govuk-body">The <code class="x-govuk-code x-govuk-code--inline">post</code> layout is designed for date-based content, such as blog posts or news items, with the optional to link to related content.</p>
+  <footer class="app-article__footer">
+    <p class="govuk-body-s">
+      <span class="govuk-visually-hidden">Posted by: </span><a class="govuk-link" href="https://www.gov.uk/government/history/past-prime-ministers/william-ewart-gladstone">William Ewart Gladstone</a> and <a class="govuk-link" href="https://www.gov.uk/government/history/past-prime-ministers/benjamin-disraeli-the-earl-of-beaconsfield">Benjamin Disraeli</a>      <span aria-hidden="true"> · </span><span class="govuk-visually-hidden">Posted on: </span><time datetime="1320969600000">11 November 2011</time>
+    </p>
+  </footer>
+
+  <div class="app-article__body">
+<figure>
+      <img src="/assets/images/govuk-opengraph-image.png" alt="A crown icon above the words GOV.UK.">
+<figcaption>The GOV.UK logo</figcaption>
+</figure>        <p class="govuk-body">The <code class="x-govuk-code x-govuk-code--inline">post</code> layout is designed for date-based content, such as blog posts or news items, with the optional to link to related content.</p>
 <h2 id="front-matter-properties" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#front-matter-properties" class="govuk-link">Front matter properties</a></h2>
 <pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--yaml" tabindex="0"><code><span class="x-govuk-code__attr">layout:</span> <span class="x-govuk-code__string">post</span>
 <span class="x-govuk-code__attr">title:</span> <span class="x-govuk-code__comment"># Appears at the top of the page and in the &lt;title&gt;</span>
 <span class="x-govuk-code__attr">description:</span> <span class="x-govuk-code__comment"># Appears below page title and in page &lt;meta&gt;</span>
 <span class="x-govuk-code__attr">date:</span> <span class="x-govuk-code__comment"># Optional. See: https://www.11ty.dev/docs/dates/</span>
-<span class="x-govuk-code__attr">author:</span> <span class="x-govuk-code__comment"># Author name</span>
-<span class="x-govuk-code__attr">author:</span>
+<span class="x-govuk-code__attr">image:</span> <span class="x-govuk-code__comment"># Optional.</span>
+  <span class="x-govuk-code__attr">src:</span> <span class="x-govuk-code__comment"># Image shown above the post and in Open Graph image</span>
+  <span class="x-govuk-code__attr">alt:</span> <span class="x-govuk-code__comment"># Alternative text for image</span>
+  <span class="x-govuk-code__attr">caption:</span> <span class="x-govuk-code__comment"># Caption for image</span>
+<span class="x-govuk-code__attr">author:</span> <span class="x-govuk-code__comment"># Optional.Author name</span>
+<span class="x-govuk-code__attr">author:</span> <span class="x-govuk-code__comment"># Optional.</span>
   <span class="x-govuk-code__bullet">-</span> <span class="x-govuk-code__attr">name:</span> <span class="x-govuk-code__comment"># Author name</span>
     <span class="x-govuk-code__attr">url:</span> <span class="x-govuk-code__comment"># Author url</span>
 <span class="x-govuk-code__attr">authors:</span>
@@ -105,12 +119,6 @@
 
 
 </div>
-
-  <footer class="app-article__footer">
-    <p class="govuk-body-s">
-      <span class="govuk-visually-hidden">Posted by: </span><a class="govuk-link" href="https://www.gov.uk/government/history/past-prime-ministers/william-ewart-gladstone">William Ewart Gladstone</a> and <a class="govuk-link" href="https://www.gov.uk/government/history/past-prime-ministers/benjamin-disraeli-the-earl-of-beaconsfield">Benjamin Disraeli</a>      <span aria-hidden="true"> · </span><span class="govuk-visually-hidden">Posted on: </span><time datetime="1320969600000">11 November 2011</time>
-    </p>
-  </footer>
 </article>
     </div>
 
