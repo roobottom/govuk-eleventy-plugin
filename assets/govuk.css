@@ -7852,47 +7852,15 @@ a:focus .x-govuk-code--inline {
     margin-bottom: 30px;
   }
 }
-.govuk-link .app-article__body figure {
-  font-family: "GDS Transport", arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-decoration: underline;
-  text-decoration-thickness: max(1px, .0625rem);
-  text-underline-offset: 0.1em;
+.app-article__body figure > .govuk-link img {
+  display: block;
+  outline: 1px solid rgba(177, 180, 182, 0.5);
 }
-@media print {
-  .govuk-link .app-article__body figure {
-    font-family: sans-serif;
-  }
+.app-article__body figure > .govuk-link img:hover {
+  outline-color: #003078;
 }
-.govuk-link .app-article__body figure:hover {
-  text-decoration-thickness: max(3px, .1875rem, .12em);
-  -webkit-text-decoration-skip-ink: none;
-  text-decoration-skip-ink: none;
-  -webkit-text-decoration-skip: none;
-  text-decoration-skip: none;
-}
-.govuk-link .app-article__body figure:focus {
-  outline: 3px solid transparent;
-  color: #0b0c0c;
-  background-color: #ffdd00;
-  box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
-  text-decoration: none;
-}
-.govuk-link .app-article__body figure:link {
-  color: #1d70b8;
-}
-.govuk-link .app-article__body figure:visited {
-  color: #4c2c92;
-}
-.govuk-link .app-article__body figure:hover {
-  color: #003078;
-}
-.govuk-link .app-article__body figure:active {
-  color: #0b0c0c;
-}
-.govuk-link .app-article__body figure:focus {
-  color: #0b0c0c;
+.app-article__body figure > .govuk-link img:active {
+  outline-color: #0b0c0c;
 }
 :focus .app-article__body figure {
   background-color: #ffdd00;
