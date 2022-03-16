@@ -8184,9 +8184,9 @@ a:focus .x-govuk-code--inline {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 700;
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 1.1111111111;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
   margin: 0 0 5px;
 }
 @media print {
@@ -8196,14 +8196,14 @@ a:focus .x-govuk-code--inline {
 }
 @media (min-width: 40.0625em) {
   .app-document-list__item-title {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1.25;
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.3157894737;
   }
 }
 @media print {
   .app-document-list__item-title {
-    font-size: 18pt;
+    font-size: 14pt;
     line-height: 1.15;
   }
 }
@@ -8279,9 +8279,9 @@ a:focus .x-govuk-code--inline {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 700;
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.25;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.1111111111;
 }
 @media print {
   .app-document-list--large .app-document-list__title {
@@ -8290,14 +8290,14 @@ a:focus .x-govuk-code--inline {
 }
 @media (min-width: 40.0625em) {
   .app-document-list--large .app-document-list__title {
-    font-size: 19px;
-    font-size: 1.1875rem;
-    line-height: 1.3157894737;
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.25;
   }
 }
 @media print {
   .app-document-list--large .app-document-list__title {
-    font-size: 14pt;
+    font-size: 18pt;
     line-height: 1.15;
   }
 }
