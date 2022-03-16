@@ -125,7 +125,7 @@
   color: #0b0c0c;
 }
 
-.app-gallery, .app-footnotes-list, .app-definition-list, .app-contents-list ul, .app-contents-list, .govuk-list {
+.app-footnotes-list, .app-definition-list, .app-contents-list ul, .app-contents-list, .govuk-list {
   font-family: "GDS Transport", arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -140,38 +140,38 @@
   list-style-type: none;
 }
 @media print {
-  .app-gallery, .app-footnotes-list, .app-definition-list, .app-contents-list ul, .app-contents-list, .govuk-list {
+  .app-footnotes-list, .app-definition-list, .app-contents-list ul, .app-contents-list, .govuk-list {
     font-family: sans-serif;
   }
 }
 @media (min-width: 40.0625em) {
-  .app-gallery, .app-footnotes-list, .app-definition-list, .app-contents-list ul, .app-contents-list, .govuk-list {
+  .app-footnotes-list, .app-definition-list, .app-contents-list ul, .app-contents-list, .govuk-list {
     font-size: 19px;
     font-size: 1.1875rem;
     line-height: 1.3157894737;
   }
 }
 @media print {
-  .app-gallery, .app-footnotes-list, .app-definition-list, .app-contents-list ul, .app-contents-list, .govuk-list {
+  .app-footnotes-list, .app-definition-list, .app-contents-list ul, .app-contents-list, .govuk-list {
     font-size: 14pt;
     line-height: 1.15;
   }
 }
 @media print {
-  .app-gallery, .app-footnotes-list, .app-definition-list, .app-contents-list ul, .app-contents-list, .govuk-list {
+  .app-footnotes-list, .app-definition-list, .app-contents-list ul, .app-contents-list, .govuk-list {
     color: #000000;
   }
 }
 @media (min-width: 40.0625em) {
-  .app-gallery, .app-footnotes-list, .app-definition-list, .app-contents-list ul, .app-contents-list, .govuk-list {
+  .app-footnotes-list, .app-definition-list, .app-contents-list ul, .app-contents-list, .govuk-list {
     margin-bottom: 20px;
   }
 }
-.app-gallery .app-gallery, .app-footnotes-list .app-gallery, .app-gallery .app-footnotes-list, .app-footnotes-list .app-footnotes-list, .app-definition-list .app-gallery, .app-definition-list .app-footnotes-list, .app-gallery .app-definition-list, .app-footnotes-list .app-definition-list, .app-definition-list .app-definition-list, .app-contents-list .app-gallery, .app-contents-list .app-footnotes-list, .app-contents-list .app-definition-list, .app-contents-list ul, .app-gallery .app-contents-list, .app-footnotes-list .app-contents-list, .app-definition-list .app-contents-list, .app-contents-list .app-contents-list, .govuk-list .app-gallery, .govuk-list .app-footnotes-list, .govuk-list .app-definition-list, .govuk-list .app-contents-list, .app-gallery .govuk-list, .app-footnotes-list .govuk-list, .app-definition-list .govuk-list, .app-contents-list .govuk-list, .govuk-list .govuk-list {
+.app-footnotes-list .app-footnotes-list, .app-definition-list .app-footnotes-list, .app-footnotes-list .app-definition-list, .app-definition-list .app-definition-list, .app-contents-list .app-footnotes-list, .app-contents-list .app-definition-list, .app-contents-list ul, .app-footnotes-list .app-contents-list, .app-definition-list .app-contents-list, .app-contents-list .app-contents-list, .govuk-list .app-footnotes-list, .govuk-list .app-definition-list, .govuk-list .app-contents-list, .app-footnotes-list .govuk-list, .app-definition-list .govuk-list, .app-contents-list .govuk-list, .govuk-list .govuk-list {
   margin-top: 10px;
 }
 
-.app-gallery > li, .app-footnotes-list > li, .app-definition-list > li, .app-contents-list ul > li, .app-contents-list > li, .govuk-list > li {
+.app-footnotes-list > li, .app-definition-list > li, .app-contents-list ul > li, .app-contents-list > li, .govuk-list > li {
   margin-bottom: 5px;
 }
 
@@ -645,7 +645,6 @@
 
 .govuk-body-m + .govuk-heading-l, .govuk-body + .govuk-heading-l,
 .govuk-body-s + .govuk-heading-l,
-.app-gallery + .govuk-heading-l,
 .app-footnotes-list + .govuk-heading-l,
 .app-definition-list + .govuk-heading-l,
 .app-contents-list ul + .govuk-heading-l,
@@ -656,7 +655,6 @@
 @media (min-width: 40.0625em) {
   .govuk-body-m + .govuk-heading-l, .govuk-body + .govuk-heading-l,
 .govuk-body-s + .govuk-heading-l,
-.app-gallery + .govuk-heading-l,
 .app-footnotes-list + .govuk-heading-l,
 .app-definition-list + .govuk-heading-l,
 .app-contents-list ul + .govuk-heading-l,
@@ -668,7 +666,6 @@
 
 .govuk-body-m + .govuk-heading-m, .govuk-body + .govuk-heading-m,
 .govuk-body-s + .govuk-heading-m,
-.app-gallery + .govuk-heading-m,
 .app-footnotes-list + .govuk-heading-m,
 .app-definition-list + .govuk-heading-m,
 .app-contents-list ul + .govuk-heading-m,
@@ -677,7 +674,6 @@
 .govuk-body-m + .govuk-heading-s,
 .govuk-body + .govuk-heading-s,
 .govuk-body-s + .govuk-heading-s,
-.app-gallery + .govuk-heading-s,
 .app-footnotes-list + .govuk-heading-s,
 .app-definition-list + .govuk-heading-s,
 .app-contents-list ul + .govuk-heading-s,
@@ -688,7 +684,6 @@
 @media (min-width: 40.0625em) {
   .govuk-body-m + .govuk-heading-m, .govuk-body + .govuk-heading-m,
 .govuk-body-s + .govuk-heading-m,
-.app-gallery + .govuk-heading-m,
 .app-footnotes-list + .govuk-heading-m,
 .app-definition-list + .govuk-heading-m,
 .app-contents-list ul + .govuk-heading-m,
@@ -697,7 +692,6 @@
 .govuk-body-m + .govuk-heading-s,
 .govuk-body + .govuk-heading-s,
 .govuk-body-s + .govuk-heading-s,
-.app-gallery + .govuk-heading-s,
 .app-footnotes-list + .govuk-heading-s,
 .app-definition-list + .govuk-heading-s,
 .app-contents-list ul + .govuk-heading-s,
@@ -8466,30 +8460,6 @@ a[aria-describedby=footnotes-label]:after {
 }
 .govuk-header__link--homepage:hover .app-header__logotype--large {
   background-color: #0b0c0c;
-}
-
-.app-gallery--layout-thumbnails {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-  grid-gap: 30px;
-}
-
-.app-gallery__figure {
-  margin-bottom: 10px;
-}
-@media (min-width: 40.0625em) {
-  .app-gallery__figure {
-    margin-bottom: 10px;
-  }
-}
-.app-gallery__figure a {
-  display: block;
-  min-height: 12rem;
-}
-.app-gallery__figure img {
-  max-height: 12rem;
-  object-fit: cover;
-  object-position: top;
 }
 
 @media (min-width: 48.0625em) {
