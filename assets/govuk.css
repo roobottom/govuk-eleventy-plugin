@@ -7977,14 +7977,13 @@ a:focus .x-govuk-code--inline {
 }
 
 [class^=govuk-heading][tabindex] {
-  padding: 15px;
-  margin-left: -15px;
-  margin-right: -15px;
+  outline: none;
 }
 
-[class^=govuk-heading]:target {
+[class^=govuk-heading]:target a {
   background-color: #fff7bf;
-  outline: none;
+  display: block;
+  outline: 15px solid #fff7bf;
 }
 
 .app-contents-list {
