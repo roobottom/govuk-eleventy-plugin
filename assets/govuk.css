@@ -7825,6 +7825,10 @@ a:focus .x-govuk-code--inline {
 .app-article__body > *:last-child {
   margin-bottom: 0;
 }
+.app-article__body abbr {
+  border-bottom: 1px dotted #505a5f;
+  cursor: help;
+}
 .app-article__body ins {
   text-decoration-style: double;
 }
