@@ -2,7 +2,7 @@
 <html lang="en" class="govuk-template no-js">
   <head>
     <meta charset="utf-8">
-    <title>Plugin options - Eleventy - GOV.UK</title>
+    <title>Customisation - Eleventy - GOV.UK</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0b0c0c"> 
     
@@ -18,8 +18,8 @@
   <link rel="stylesheet" href="/govuk-eleventy-plugin/assets/govuk.css">
 
   <meta property="og:url" content="https://x-govuk.github.io/govuk-eleventy-plugin/">
-  <meta property="og:title" content="Plugin options">
-<meta property="og:description" name="description" content="The plugin provides several options that allow you to customise the appearance of your website.">    
+  <meta property="og:title" content="Customisation">
+<meta property="og:description" name="description" content="Customise the appearance of your website.">    
     
     <meta property="og:image" content="/assets/images/govuk-opengraph-image.png">
   </head>
@@ -53,7 +53,7 @@
     </div>
     <div class="app-site-search govuk-!-display-none-print" data-module="app-search" data-search-index="/govuk-eleventy-plugin/search.json">
   <label class="govuk-visually-hidden" for="app-site-search__input">Search site</label>
-  <a class="app-site-search__link govuk-link-no-visited" href="/sitemap">Sitemap</a>
+  <a class="app-site-search__link govuk-link-no-visited" href="/govuk-eleventy-plugin/sitemap">Sitemap</a>
 </div>
 
   </div>
@@ -72,7 +72,10 @@
           <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/get-started/">Get started</a>
         </li>
         <li class="x-govuk-side-navigation__section-item x-govuk-side-navigation__section-item--current">
-          <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/options/" aria-current="true">Plugin options</a>
+          <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/options/" aria-current="true">Customisation</a>
+        </li>
+        <li class="x-govuk-side-navigation__section-item">
+          <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/search/">Adding site search</a>
         </li>
         <li class="x-govuk-side-navigation__section-item">
           <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/markdown/">Using Markdown</a>
@@ -91,53 +94,170 @@
 <article class="app-article">
   <header class="app-article__header">
     <h1 class="app-article__title govuk-heading-xl">
-      Plugin options
+      Customisation
     </h1>
       <div class="govuk-body-l">
-        The plugin provides several options that allow you to customise the appearance of your website.
+        Customise the appearance of your website.
       </div>
   </header>
 
 
   <div class="app-article__body">
-        <table class="govuk-table">
+        <p class="govuk-body">GOV.UK Eleventy has a number of options allowing you to customise the appearance of your website.</p>
+<p class="govuk-body">You can add these options in the second parameter of the <code class="x-govuk-code x-govuk-code--inline">addPlugin</code> function in your config file. For example, to add a product name  to the right of the GOV.UK text in the header, you would add the following:</p>
+<pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--js" tabindex="0"><code><span class="x-govuk-code__keyword">const</span> govukEleventyPlugin = <span class="x-govuk-code__built_in">require</span>(<span class="x-govuk-code__string">&#x27;govuk-eleventy-plugin&#x27;</span>)
+
+<span class="x-govuk-code__variable language_">module</span>.<span class="x-govuk-code__property">exports</span> = <span class="x-govuk-code__keyword">function</span>(<span class="x-govuk-code__params">eleventyConfig</span>) {
+  eleventyConfig.<span class="x-govuk-code__title function_">addPlugin</span>(govukEleventyPlugin, {
+    <span class="x-govuk-code__attr">header</span>: {
+      <span class="x-govuk-code__attr">productName</span>: <span class="x-govuk-code__string">&#x27;Apply for a juggling licence API docs&#x27;</span>,
+    }
+  })
+}
+</code></pre>
+
+<h2 id="plugin-options" tabindex="-1" class="govuk-heading-l"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#plugin-options" class="govuk-link">Plugin options</a></h2>
+<table class="govuk-table">
 <thead class="govuk-table__head">
 <tr class="govuk-table__row">
 <th style="text-align:left" class="govuk-table__header">Name</th>
 <th style="text-align:left" class="govuk-table__header">Type</th>
 <th style="text-align:left" class="govuk-table__header">Description</th>
+<th style="text-align:left" class="govuk-table__header">Default</th>
+</tr>
+</thead>
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">
+<td style="text-align:left" class="govuk-table__cell"><strong>homeKey</strong></td>
+<td style="text-align:left" class="govuk-table__cell">string</td>
+<td style="text-align:left" class="govuk-table__cell">Label to use for first item in pagination and key to use when referring to the home page for <code class="x-govuk-code x-govuk-code--inline">eleventyNavigation.parent</code>.</td>
+<td style="text-align:left" class="govuk-table__cell"><code class="x-govuk-code x-govuk-code--inline">'Home'</code>.</td>
+</tr>
+<tr class="govuk-table__row">
+<td style="text-align:left" class="govuk-table__cell"><strong>pathPrefix</strong></td>
+<td style="text-align:left" class="govuk-table__cell">string</td>
+<td style="text-align:left" class="govuk-table__cell">If your site lives in a different subdirectory (particularly useful with GitHub pages), use <code class="x-govuk-code x-govuk-code--inline">pathPrefix</code> to specify this. It’s used by the <code class="x-govuk-code x-govuk-code--inline">url</code> filter and inserted at the beginning of all absolute URLs. Used in conjunction with <a href="https://www.11ty.dev/docs/config/#deploy-to-a-subdirectory-with-a-path-prefix" class="govuk-link">Eleventy’s own <code class="x-govuk-code x-govuk-code--inline">pathPrefix</code> option</a>.</td>
+<td style="text-align:left" class="govuk-table__cell"><code class="x-govuk-code x-govuk-code--inline">'/'</code></td>
+</tr>
+<tr class="govuk-table__row">
+<td style="text-align:left" class="govuk-table__cell"><strong>url</strong></td>
+<td style="text-align:left" class="govuk-table__cell">string</td>
+<td style="text-align:left" class="govuk-table__cell">The URL where your website will be hosted. Used to provide canonical URLs used in Open Graph meta data.</td>
+<td style="text-align:left" class="govuk-table__cell"><code class="x-govuk-code x-govuk-code--inline">false</code></td>
+</tr>
+<tr class="govuk-table__row">
+<td style="text-align:left" class="govuk-table__cell"><strong>header</strong></td>
+<td style="text-align:left" class="govuk-table__cell">object</td>
+<td style="text-align:left" class="govuk-table__cell">See <a href="#options-for-header" class="govuk-link">header</a>.</td>
+<td style="text-align:left" class="govuk-table__cell"></td>
+</tr>
+<tr class="govuk-table__row">
+<td style="text-align:left" class="govuk-table__cell"><strong>footer</strong></td>
+<td style="text-align:left" class="govuk-table__cell">object</td>
+<td style="text-align:left" class="govuk-table__cell">See <a href="#options-for-footer" class="govuk-link">footer</a>.</td>
+<td style="text-align:left" class="govuk-table__cell"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="options-for-header" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#options-for-header" class="govuk-link">Options for header</a></h3>
+<p class="govuk-body">In addition to the <a href="https://design-system.service.gov.uk/components/header/" class="govuk-link">options available for the header component</a>, the following options can also be set:</p>
+<table class="govuk-table">
+<thead class="govuk-table__head">
+<tr class="govuk-table__row">
+<th style="text-align:left" class="govuk-table__header">Name</th>
+<th style="text-align:left" class="govuk-table__header">Type</th>
+<th style="text-align:left" class="govuk-table__header">Description</th>
+<th style="text-align:left" class="govuk-table__header">Default</th>
 </tr>
 </thead>
 <tbody class="govuk-table__body">
 <tr class="govuk-table__row">
 <td style="text-align:left" class="govuk-table__cell"><strong>homepageUrl</strong></td>
 <td style="text-align:left" class="govuk-table__cell">string</td>
-<td style="text-align:left" class="govuk-table__cell">URL organisation is linked to. Default is <code class="x-govuk-code x-govuk-code--inline">'/'</code>.</td>
+<td style="text-align:left" class="govuk-table__cell">URL organisation name is linked to.</td>
+<td style="text-align:left" class="govuk-table__cell"><code class="x-govuk-code x-govuk-code--inline">'/'</code></td>
 </tr>
 <tr class="govuk-table__row">
 <td style="text-align:left" class="govuk-table__cell"><strong>organisationLogo</strong></td>
 <td style="text-align:left" class="govuk-table__cell">string</td>
-<td style="text-align:left" class="govuk-table__cell">Organisation logo that appears to the left of the organisation name. If set to <code class="x-govuk-code x-govuk-code--inline">crown</code> the GOV.UK crown logo is shown. If set to <code class="x-govuk-code x-govuk-code--inline">royal-arms</code>, the Royal Coat of Arms is shown. Default is <code class="x-govuk-code x-govuk-code--inline">false</code>.</td>
+<td style="text-align:left" class="govuk-table__cell">Organisation logo that appears to the left of the organisation name. If set to <code class="x-govuk-code x-govuk-code--inline">crown</code> the GOV.UK crown logo is shown. If set to <code class="x-govuk-code x-govuk-code--inline">royal-arms</code>, the Royal Coat of Arms is shown.</td>
+<td style="text-align:left" class="govuk-table__cell"><code class="x-govuk-code x-govuk-code--inline">'crown'</code></td>
 </tr>
 <tr class="govuk-table__row">
 <td style="text-align:left" class="govuk-table__cell"><strong>organisationName</strong></td>
 <td style="text-align:left" class="govuk-table__cell">string</td>
-<td style="text-align:left" class="govuk-table__cell">Organisation name. Default is <code class="x-govuk-code x-govuk-code--inline">'GOV.UK'</code>.</td>
+<td style="text-align:left" class="govuk-table__cell">Organisation name.</td>
+<td style="text-align:left" class="govuk-table__cell"><code class="x-govuk-code x-govuk-code--inline">'GOV.UK'</code></td>
 </tr>
 <tr class="govuk-table__row">
 <td style="text-align:left" class="govuk-table__cell"><strong>productName</strong></td>
 <td style="text-align:left" class="govuk-table__cell">string</td>
 <td style="text-align:left" class="govuk-table__cell">Product name. Default is <code class="x-govuk-code x-govuk-code--inline">false</code>.</td>
+<td style="text-align:left" class="govuk-table__cell"><code class="x-govuk-code x-govuk-code--inline">false</code></td>
 </tr>
 <tr class="govuk-table__row">
-<td style="text-align:left" class="govuk-table__cell"><strong>homeKey</strong></td>
+<td style="text-align:left" class="govuk-table__cell"><strong>search</strong></td>
+<td style="text-align:left" class="govuk-table__cell">object</td>
+<td style="text-align:left" class="govuk-table__cell">See <a href="#options-for-header-search" class="govuk-link">footer</a>.</td>
+<td style="text-align:left" class="govuk-table__cell"><code class="x-govuk-code x-govuk-code--inline">false</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="options-for-header.search" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#options-for-header.search" class="govuk-link">Options for header.search</a></h3>
+<p class="govuk-body">Options for site search. See <a href="/search" class="govuk-link">Adding site search</a>.</p>
+<table class="govuk-table">
+<thead class="govuk-table__head">
+<tr class="govuk-table__row">
+<th style="text-align:left" class="govuk-table__header">Name</th>
+<th style="text-align:left" class="govuk-table__header">Type</th>
+<th style="text-align:left" class="govuk-table__header">Description</th>
+<th style="text-align:left" class="govuk-table__header">Default</th>
+</tr>
+</thead>
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">
+<td style="text-align:left" class="govuk-table__cell"><strong>label</strong></td>
 <td style="text-align:left" class="govuk-table__cell">string</td>
-<td style="text-align:left" class="govuk-table__cell">Label to use for first item in pagination. Default is <code class="x-govuk-code x-govuk-code--inline">'Home'</code>.</td>
+<td style="text-align:left" class="govuk-table__cell">Text to show in the search field.</td>
+<td style="text-align:left" class="govuk-table__cell"><code class="x-govuk-code x-govuk-code--inline">'Search site'</code></td>
 </tr>
 <tr class="govuk-table__row">
-<td style="text-align:left" class="govuk-table__cell"><strong>searchIndex</strong></td>
+<td style="text-align:left" class="govuk-table__cell"><strong>indexPath</strong></td>
 <td style="text-align:left" class="govuk-table__cell">string</td>
-<td style="text-align:left" class="govuk-table__cell">Location of a search index. Default is <code class="x-govuk-code x-govuk-code--inline">false</code>.</td>
+<td style="text-align:left" class="govuk-table__cell">Path to search index file. If set, a search input will be shown in the header.</td>
+<td style="text-align:left" class="govuk-table__cell"><code class="x-govuk-code x-govuk-code--inline">false</code></td>
+</tr>
+<tr class="govuk-table__row">
+<td style="text-align:left" class="govuk-table__cell"><strong>sitemapPath</strong></td>
+<td style="text-align:left" class="govuk-table__cell">string</td>
+<td style="text-align:left" class="govuk-table__cell">Location of a sitemap. If set, a search input will be shown in the header.</td>
+<td style="text-align:left" class="govuk-table__cell"><code class="x-govuk-code x-govuk-code--inline">false</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="options-for-footer" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#options-for-footer" class="govuk-link">Options for footer</a></h3>
+<p class="govuk-body">In addition to the <a href="https://design-system.service.gov.uk/components/footer/" class="govuk-link">options available for the footer component</a>, the following options can also be set:</p>
+<table class="govuk-table">
+<thead class="govuk-table__head">
+<tr class="govuk-table__row">
+<th style="text-align:left" class="govuk-table__header">Name</th>
+<th style="text-align:left" class="govuk-table__header">Type</th>
+<th style="text-align:left" class="govuk-table__header">Description</th>
+<th style="text-align:left" class="govuk-table__header">Default</th>
+</tr>
+</thead>
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">
+<td style="text-align:left" class="govuk-table__cell"><strong>copyright</strong></td>
+<td style="text-align:left" class="govuk-table__cell">string</td>
+<td style="text-align:left" class="govuk-table__cell">Copyright statement. Can contain inline Markdown. If set to <code class="x-govuk-code x-govuk-code--inline">'crown'</code>, <code class="x-govuk-code x-govuk-code--inline">© Crown copyright</code> is displayed below an image of the Royal Coat of Arms. If set to <code class="x-govuk-code x-govuk-code--inline">false</code>, the current year is shown (i.e. <code class="x-govuk-code x-govuk-code--inline">© 2022</code>).</td>
+<td style="text-align:left" class="govuk-table__cell"><code class="x-govuk-code x-govuk-code--inline">'crown'</code></td>
+</tr>
+<tr class="govuk-table__row">
+<td style="text-align:left" class="govuk-table__cell"><strong>licence</strong></td>
+<td style="text-align:left" class="govuk-table__cell">string</td>
+<td style="text-align:left" class="govuk-table__cell">Licence description. Can contain inline Markdown. If set to <code class="x-govuk-code x-govuk-code--inline">'ogl'</code>, the OGL logo is shown alongside <code class="x-govuk-code x-govuk-code--inline">All content is available under the Open Government Licence v3.0, except where otherwise stated</code>.</td>
+<td style="text-align:left" class="govuk-table__cell"><code class="x-govuk-code x-govuk-code--inline">'ogl'</code></td>
 </tr>
 </tbody>
 </table>

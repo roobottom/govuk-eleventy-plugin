@@ -19,7 +19,7 @@
 
   <meta property="og:url" content="https://x-govuk.github.io/govuk-eleventy-plugin/">
   <meta property="og:title" content="Get started">
-    
+<meta property="og:description" name="description" content="GOV.UK Eleventy is a plugin for Eleventy, a static site generator.">    
     
     <meta property="og:image" content="/assets/images/govuk-opengraph-image.png">
   </head>
@@ -53,7 +53,7 @@
     </div>
     <div class="app-site-search govuk-!-display-none-print" data-module="app-search" data-search-index="/govuk-eleventy-plugin/search.json">
   <label class="govuk-visually-hidden" for="app-site-search__input">Search site</label>
-  <a class="app-site-search__link govuk-link-no-visited" href="/sitemap">Sitemap</a>
+  <a class="app-site-search__link govuk-link-no-visited" href="/govuk-eleventy-plugin/sitemap">Sitemap</a>
 </div>
 
   </div>
@@ -72,7 +72,10 @@
           <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/get-started/" aria-current="true">Get started</a>
         </li>
         <li class="x-govuk-side-navigation__section-item">
-          <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/options/">Plugin options</a>
+          <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/options/">Customisation</a>
+        </li>
+        <li class="x-govuk-side-navigation__section-item">
+          <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/search/">Adding site search</a>
         </li>
         <li class="x-govuk-side-navigation__section-item">
           <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/markdown/">Using Markdown</a>
@@ -93,17 +96,32 @@
     <h1 class="app-article__title govuk-heading-xl">
       Get started
     </h1>
+      <div class="govuk-body-l">
+        GOV.UK Eleventy is a plugin for <a href="https://11ty.dev" class="govuk-link">Eleventy</a>, a static site generator.
+      </div>
   </header>
 
 
   <div class="app-article__body">
-        <p class="govuk-body">GOV.UK Eleventy is a plugin for Eleventy, a static site generator. It uses <code class="x-govuk-code x-govuk-code--inline">govuk-frontend</code> components and provides support for Markdown formatted documents.</p>
+        <p class="govuk-body">By providing a set of sensible defaults, you can start writing documentation rather than spend time building a website.</p>
+<h2 id="features" tabindex="-1" class="govuk-heading-l"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#features" class="govuk-link">Features</a></h2>
+<p class="govuk-body">This plugin includes the following features:</p>
 <ul class="govuk-list govuk-list--bullet">
-<li>Sets <a href="https://mozilla.github.io/nunjucks/" class="govuk-link">Nunjucks</a> as the template language</li>
-<li>Uses <a href="https://github.com/markdown-it/markdown-it" class="govuk-link">markdown-it</a> to and the <a href="https://github.com/x-govuk/markdown-it-govuk" class="govuk-link">markdown-it-govuk</a> plugin to ensure text shares the same styles as those used on GOV.UK</li>
-<li>Provides a collection of <a href="/example-layouts" class="govuk-link">layout templates</a></li>
-<li>Adds search feature</li>
-<li>Generates assets</li>
+<li>
+<p class="govuk-body">a set of <a href="/example-layouts" class="govuk-link">layouts</a> that use <a href="https://github.com/alphagov/govuk-frontend" class="govuk-link"><code class="x-govuk-code x-govuk-code--inline">govuk-frontend</code></a> components and styles</p>
+</li>
+<li>
+<p class="govuk-body">uses <a href="https://github.com/x-govuk/markdown-it-govuk" class="govuk-link"><code class="x-govuk-code x-govuk-code--inline">markdown-it-govuk</code></a>, to ensure your pages use the same typography and styles as those used on GOV.UK</p>
+</li>
+<li>
+<p class="govuk-body">support for an <a href="/markdown-advanced" class="govuk-link">extended Markdown syntax</a></p>
+</li>
+<li>
+<p class="govuk-body"><a href="/options" class="govuk-link">full configuration</a> of your website’s header and footer</p>
+</li>
+<li>
+<p class="govuk-body">site search</p>
+</li>
 </ul>
 <h2 id="requirements" tabindex="-1" class="govuk-heading-l"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#requirements" class="govuk-link">Requirements</a></h2>
 <ul class="govuk-list govuk-list--bullet">
@@ -112,11 +130,11 @@
 </ul>
 <p class="govuk-body"><a href="https://github.com/nvm-sh/nvm" class="govuk-link">Node version manager</a> is recommended if you are working across multiple projects that use different versions of Node.js.</p>
 <h2 id="installation" tabindex="-1" class="govuk-heading-l"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#installation" class="govuk-link">Installation</a></h2>
-<p class="govuk-body">First, install Eleventy and this plugin:</p>
+<p class="govuk-body">To install both Eleventy and this plugin, in your terminal type:</p>
 <pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--shell" tabindex="0"><code>npm install @11ty/eleventy govuk-eleventy-plugin --save
 </code></pre>
 
-<p class="govuk-body">Next, add an <code class="x-govuk-code x-govuk-code--inline">.eleventy.js</code> file to the root directory of your project. This file is used to configure Eleventy.</p>
+<p class="govuk-body">Next, add an <code class="x-govuk-code x-govuk-code--inline">.eleventy.js</code> file to the root directory of your project. This file is used to <a href="https://www.11ty.dev/docs/config/" class="govuk-link">configure Eleventy</a>.</p>
 <pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--js" tabindex="0"><code><span class="x-govuk-code__keyword">const</span> govukEleventyPlugin = <span class="x-govuk-code__built_in">require</span>(<span class="x-govuk-code__string">&#x27;govuk-eleventy-plugin&#x27;</span>)
 
 <span class="x-govuk-code__variable language_">module</span>.<span class="x-govuk-code__property">exports</span> = <span class="x-govuk-code__keyword">function</span>(<span class="x-govuk-code__params">eleventyConfig</span>) {
@@ -135,12 +153,22 @@
 };
 </code></pre>
 
-<p class="govuk-body">To generate a site, use the following command:</p>
+<p class="govuk-body">To generate a site, type the following command:</p>
 <pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--shell" tabindex="0"><code>npx eleventy --serve
 </code></pre>
 
-<p class="govuk-body">Once all the files have been generated, a URL will be shown which you can enter into your browser’s address bar (usually this is <a href="http://localhost:8080" class="govuk-link">http://localhost:8080</a>).</p>
-<p class="govuk-body">Whenever you add a new page, or edit an existing page, the browser will automatically refresh with any of your changes applied.</p>
+<p class="govuk-body">Once all the files have been generated, 2 preview URLs will be shown, either of which you can enter into your browser’s address bar:</p>
+<pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--shell" tabindex="0"><code>[11ty] Copied 14 files / Wrote 0 files in 1.11 seconds (v1.0.0)
+[11ty] Watching…
+[Browsersync] Access URLs:
+ ------------------------------------
+    Local: http://localhost:8080
+ External: http://192.168.178.29:8080
+ ------------------------------------
+[Browsersync] Serving files from: public
+</code></pre>
+
+<p class="govuk-body">Whenever you add a new page, or edit an existing one, the browser will automatically refresh with any of your changes applied.</p>
 <h2 id="create-your-first-page" tabindex="-1" class="govuk-heading-l"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#create-your-first-page" class="govuk-link">Create your first page</a></h2>
 <p class="govuk-body">You’re now ready to start adding pages to your site.</p>
 <p class="govuk-body">Pages are made up of 2 parts: a front matter and its contents.</p>
@@ -153,9 +181,9 @@
 </code></pre>
 
 <p class="govuk-body">Create a file named <code class="x-govuk-code x-govuk-code--inline">index.md</code> file to the root directory of your project, and add the above content.</p>
-<p class="govuk-body">Visit <a href="http://localhost:8080" class="govuk-link">http://localhost:8080</a> to see your page appearing using GOV.UK-style page.</p>
+<p class="govuk-body">Open the preview URL in your browser to see this new page appear using GOV.UK styles.</p>
 <h2 id="choose-a-layout" tabindex="-1" class="govuk-heading-l"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#choose-a-layout" class="govuk-link">Choose a layout</a></h2>
-<p class="govuk-body">The plugin provides 5 different layouts:</p>
+<p class="govuk-body">This plugin provides 5 different layouts, each with different options you can provide in the front matter:</p>
 <ul class="govuk-list govuk-list--bullet">
 <li><a href="/example-layouts/post/" class="govuk-link">Post</a> – A date-based post</li>
 <li><a href="/example-layouts/collection/" class="govuk-link">Collection</a> – A collection of pages</li>
