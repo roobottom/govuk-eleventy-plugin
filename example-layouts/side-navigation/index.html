@@ -19,7 +19,7 @@
 
   <meta property="og:url" content="https://x-govuk.github.io/govuk-eleventy-plugin/">
   <meta property="og:title" content="Page with side navigation">
-<meta property="og:description" name="description" content="A page with side navigation">    
+<meta property="og:description" name="description" content="A page with side navigation.">    
     
     <meta property="og:image" content="/assets/images/govuk-opengraph-image.png">
   </head>
@@ -100,10 +100,10 @@
                   <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/example-layouts/page/">Page</a>
                 </li>
                 <li class="x-govuk-side-navigation__section-item">
-                  <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/example-layouts/post/">Post</a>
+                  <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/example-layouts/side-navigation/">Page with side navigation</a>
                 </li>
                 <li class="x-govuk-side-navigation__section-item">
-                  <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/example-layouts/side-navigation/">Page with side navigation</a>
+                  <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/example-layouts/post/">Post</a>
                 </li>
                 <li class="x-govuk-side-navigation__section-item">
                   <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/example-layouts/collection/">Collection</a>
@@ -124,7 +124,7 @@
       Page with side navigation
     </h1>
       <div class="govuk-body-l">
-        A page with side navigation
+        A page with side navigation.
       </div>
   </header>
 
@@ -133,10 +133,23 @@
         <p class="govuk-body">The <code class="x-govuk-code x-govuk-code--inline">side-navigation</code> layout is with navigation on the left side of the page.</p>
 <h2 id="front-matter-properties" tabindex="-1" class="govuk-heading-l"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#front-matter-properties" class="govuk-link">Front matter properties</a></h2>
 <pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--yaml" tabindex="0"><code><span class="x-govuk-code__attr">layout:</span> <span class="x-govuk-code__string">page</span>
+<span class="x-govuk-code__attr">order:</span> <span class="x-govuk-code__comment"># Adjust position of page in side navigation</span>
 <span class="x-govuk-code__attr">title:</span> <span class="x-govuk-code__comment"># Appears at the top of the page and in the &lt;title&gt;</span>
 <span class="x-govuk-code__attr">description:</span> <span class="x-govuk-code__comment"># Appears below page title and in page &lt;meta&gt;</span>
+<span class="x-govuk-code__attr">related:</span> <span class="x-govuk-code__comment"># Related links (appears below content)</span>
+  <span class="x-govuk-code__attr">sections:</span>
+    <span class="x-govuk-code__bullet">-</span> <span class="x-govuk-code__attr">title:</span> <span class="x-govuk-code__comment"># Default is ‘Related content’</span>
+      <span class="x-govuk-code__attr">items:</span>
+        <span class="x-govuk-code__bullet">-</span> <span class="x-govuk-code__attr">text:</span> <span class="x-govuk-code__comment"># Title of related link</span>
+          <span class="x-govuk-code__attr">href:</span> <span class="x-govuk-code__comment"># URL for related link</span>
+      <span class="x-govuk-code__attr">subsections:</span>
+        <span class="x-govuk-code__bullet">-</span> <span class="x-govuk-code__attr">title:</span> <span class="x-govuk-code__comment"># Title for subsection</span>
+          <span class="x-govuk-code__attr">items:</span>
+          <span class="x-govuk-code__bullet">-</span> <span class="x-govuk-code__attr">text:</span> <span class="x-govuk-code__comment"># Title of link in subsection</span>
+            <span class="x-govuk-code__attr">href:</span> <span class="x-govuk-code__comment"># URL for link in subsection</span>
 </code></pre>
 
+<p class="govuk-body">View <a href="https://github.com/x-govuk/govuk-eleventy-plugin/blob/main/docs/example-layouts/side-navigation.md?plain=1" class="govuk-link">the source for this page</a> on GitHub</p>
 
 </div>
 </article>

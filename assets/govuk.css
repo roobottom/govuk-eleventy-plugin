@@ -7842,7 +7842,8 @@ a:focus .x-govuk-code--inline {
 }
 .app-article__body figure {
   margin-bottom: 20px;
-  margin: 0;
+  margin-left: 0;
+  margin-right: 0;
   width: 100%;
 }
 @media (min-width: 40.0625em) {

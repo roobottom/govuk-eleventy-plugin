@@ -19,7 +19,7 @@
 
   <meta property="og:url" content="https://x-govuk.github.io/govuk-eleventy-plugin/">
   <meta property="og:title" content="Collection">
-<meta property="og:description" name="description" content="A collection of pages">    
+<meta property="og:description" name="description" content="A collection of pages.">    
     
     <meta property="og:image" content="/assets/images/govuk-opengraph-image.png">
   </head>
@@ -80,7 +80,7 @@
           Collection
         </h1>
         <p class="x-govuk-masthead__description">
-          A collection of&nbsp;pages
+          A collection of&nbsp;pages.
         </p>
       </div>
     </div>
@@ -95,18 +95,27 @@
           <p class="govuk-body">The <code class="x-govuk-code x-govuk-code--inline">collection</code> layout is designed for listing documents.</p>
 <h2 id="front-matter-properties" tabindex="-1" class="govuk-heading-l"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#front-matter-properties" class="govuk-link">Front matter properties</a></h2>
 <pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--yaml" tabindex="0"><code><span class="x-govuk-code__attr">layout:</span> <span class="x-govuk-code__string">collection</span>
+<span class="x-govuk-code__attr">order:</span> <span class="x-govuk-code__comment"># Adjust position of page in side navigation</span>
 <span class="x-govuk-code__attr">title:</span> <span class="x-govuk-code__comment"># Appears at the top of the page and in the &lt;title&gt;</span>
 <span class="x-govuk-code__attr">description:</span> <span class="x-govuk-code__comment"># Appears below page title and in page &lt;meta&gt;</span>
-<span class="x-govuk-code__attr">related:</span> <span class="x-govuk-code__comment"># Optional. Related links appear in sidebar</span>
-  <span class="x-govuk-code__attr">title:</span> <span class="x-govuk-code__comment"># Defaults to ‘Related links’</span>
-  <span class="x-govuk-code__bullet">-</span> <span class="x-govuk-code__attr">text:</span> <span class="x-govuk-code__comment"># Title of related link</span>
-    <span class="x-govuk-code__attr">href:</span> <span class="x-govuk-code__comment"># URL for related link</span>
-<span class="x-govuk-code__attr">collection:</span> <span class="x-govuk-code__comment"># Name of collection. Defaults is ‘Posts’</span>
-<span class="x-govuk-code__attr">pagination:</span>
-  <span class="x-govuk-code__attr">data:</span> <span class="x-govuk-code__comment"># Collection to show</span>
-  <span class="x-govuk-code__attr">size:</span> <span class="x-govuk-code__comment"># Number of items to show on each page</span>
+<span class="x-govuk-code__attr">collection:</span> <span class="x-govuk-code__comment"># Name of collection. Default is ‘Posts’</span>
+<span class="x-govuk-code__attr">pagination:</span> <span class="x-govuk-code__comment"># Required. See https://www.11ty.dev/docs/pagination/</span>
+  <span class="x-govuk-code__attr">data:</span> <span class="x-govuk-code__comment"># Required. Collection to show</span>
+  <span class="x-govuk-code__attr">size:</span> <span class="x-govuk-code__comment"># Required. Number of items to show on each page</span>
+<span class="x-govuk-code__attr">related:</span> <span class="x-govuk-code__comment"># Related links (appears within sidebar)</span>
+  <span class="x-govuk-code__attr">sections:</span>
+    <span class="x-govuk-code__bullet">-</span> <span class="x-govuk-code__attr">title:</span> <span class="x-govuk-code__comment"># Default is ‘Related content’</span>
+      <span class="x-govuk-code__attr">items:</span>
+        <span class="x-govuk-code__bullet">-</span> <span class="x-govuk-code__attr">text:</span> <span class="x-govuk-code__comment"># Title of related link</span>
+          <span class="x-govuk-code__attr">href:</span> <span class="x-govuk-code__comment"># URL for related link</span>
+      <span class="x-govuk-code__attr">subsections:</span>
+        <span class="x-govuk-code__bullet">-</span> <span class="x-govuk-code__attr">title:</span> <span class="x-govuk-code__comment"># Title for subsection</span>
+          <span class="x-govuk-code__attr">items:</span>
+          <span class="x-govuk-code__bullet">-</span> <span class="x-govuk-code__attr">text:</span> <span class="x-govuk-code__comment"># Title of link in subsection</span>
+            <span class="x-govuk-code__attr">href:</span> <span class="x-govuk-code__comment"># URL for link in subsection</span>
 </code></pre>
 
+<p class="govuk-body">View <a href="https://github.com/x-govuk/govuk-eleventy-plugin/blob/main/docs/example-layouts/collection.md?plain=1" class="govuk-link">the source for this page</a> on GitHub</p>
 
           <h2 class="govuk-heading-l govuk-!-font-size-27">
             Posts
@@ -126,12 +135,22 @@
       </h2>
         <ul class="x-govuk-related-navigation__link-list">
             <li class="x-govuk-related-navigation__link">
-              <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="#">Another page</a>
+              <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="/example-layouts">Example layouts</a>
             </li>
             <li class="x-govuk-related-navigation__link">
-              <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="#">Yet another page</a>
+              <a class="govuk-link x-govuk-related-navigation__section-link x-govuk-related-navigation__section-link--other" href="/options">Customisation</a>
             </li>
         </ul>
+        <nav role="navigation" class="x-govuk-related-navigation__nav-section" aria-labelledby="related-nav-eleventy-documentation">
+          <h3 class="x-govuk-related-navigation__sub-heading" id="related-nav-topics-eleventy-documentation">
+            Eleventy documentation
+          </h3>
+          <ul class="x-govuk-related-navigation__link-list">
+              <li class="x-govuk-related-navigation__link">
+                <a class="govuk-link x-govuk-related-navigation__section-link" href="https://www.11ty.dev/docs/data-frontmatter/">Front matter data</a>
+              </li>
+          </ul>
+        </nav>
     </nav>
 </div>
 

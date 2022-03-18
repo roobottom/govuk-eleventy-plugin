@@ -19,7 +19,7 @@
 
   <meta property="og:url" content="https://x-govuk.github.io/govuk-eleventy-plugin/">
   <meta property="og:title" content="Product">
-<meta property="og:description" name="description" content="A product page"><meta property="og:image" content="https://x-govuk.github.io/govuk-eleventy-plugin/images/homepage-illustration.png"><meta property="og:image:alt" content="The Eleventy mascot floating above a laptop.">    
+<meta property="og:description" name="description" content="A product page."><meta property="og:image" content="https://x-govuk.github.io/govuk-eleventy-plugin/images/homepage-illustration.png"><meta property="og:image:alt" content="The Eleventy mascot floating above a laptop.">    
     
     <meta property="og:image" content="/assets/images/govuk-opengraph-image.png">
   </head>
@@ -80,7 +80,7 @@
           Product
         </h1>
         <p class="x-govuk-masthead__description">
-          A product&nbsp;page
+          A product&nbsp;page.
         </p>
         <a href="." role="button" draggable="false" class="govuk-button x-govuk-button--inverse govuk-button--start" data-module="govuk-button">
   Get started
@@ -103,16 +103,18 @@
       <p class="govuk-body">The <code class="x-govuk-code x-govuk-code--inline">product</code> layout is designed for home and product pages, based on <a href="https://github.com/alphagov/product-page-example" class="govuk-link">Product Page Example</a>.</p>
 <h2 id="front-matter-properties" tabindex="-1" class="govuk-heading-l"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#front-matter-properties" class="govuk-link">Front matter properties</a></h2>
 <pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--yaml" tabindex="0"><code><span class="x-govuk-code__attr">layout:</span> <span class="x-govuk-code__string">product</span>
-<span class="x-govuk-code__attr">title:</span>
-<span class="x-govuk-code__attr">description:</span> <span class="x-govuk-code__comment"># Optional</span>
-<span class="x-govuk-code__attr">startButton:</span>
-  <span class="x-govuk-code__attr">text:</span> <span class="x-govuk-code__comment"># Optional</span>
-  <span class="x-govuk-code__attr">href:</span> <span class="x-govuk-code__comment"># Optional</span>
+<span class="x-govuk-code__attr">order:</span> <span class="x-govuk-code__comment"># Adjust position of page in side navigation</span>
+<span class="x-govuk-code__attr">title:</span> <span class="x-govuk-code__comment"># Appears at the top of the page and in the &lt;title&gt;</span>
+<span class="x-govuk-code__attr">description:</span> <span class="x-govuk-code__comment"># Appears below page title and in page &lt;meta&gt;</span>
+<span class="x-govuk-code__attr">startButton:</span> <span class="x-govuk-code__comment"># Optional</span>
+  <span class="x-govuk-code__attr">text:</span> <span class="x-govuk-code__comment"># Label for start button</span>
+  <span class="x-govuk-code__attr">href:</span> <span class="x-govuk-code__comment"># Link for start button</span>
 <span class="x-govuk-code__attr">image:</span>
-  <span class="x-govuk-code__attr">src:</span> <span class="x-govuk-code__comment"># Location of hero image.</span>
+  <span class="x-govuk-code__attr">src:</span> <span class="x-govuk-code__comment"># Image source path for hero image.</span>
   <span class="x-govuk-code__attr">alt:</span> <span class="x-govuk-code__comment"># Textual alternative for hero image.</span>
 </code></pre>
 
+<p class="govuk-body">View <a href="https://github.com/x-govuk/govuk-eleventy-plugin/blob/main/docs/example-layouts/product.md?plain=1" class="govuk-link">the source for this page</a> on GitHub</p>
 
     </main>
   </div>
