@@ -64,6 +64,9 @@
   <div class="govuk-breadcrumbs govuk-!-display-none-print">
   <ol class="govuk-breadcrumbs__list">
     <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="https://x-govuk.github.io">X-GOVUK shared projects</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
       <a class="govuk-breadcrumbs__link" href="/govuk-eleventy-plugin/">GOV.UK Eleventy</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
@@ -79,37 +82,37 @@
   <h2 class="govuk-visually-hidden" id="x-govuk-side-navigation-heading">Pages in this section</h2>
     <ul class="x-govuk-side-navigation__section">
         <li class="x-govuk-side-navigation__section-item">
-          <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/get-started/">Get started</a>
+          <a class="x-govuk-side-navigation__link" href="/get-started/">Get started</a>
         </li>
         <li class="x-govuk-side-navigation__section-item">
-          <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/options/">Customisation</a>
+          <a class="x-govuk-side-navigation__link" href="/options/">Customisation</a>
         </li>
         <li class="x-govuk-side-navigation__section-item">
-          <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/search/">Adding site search</a>
+          <a class="x-govuk-side-navigation__link" href="/search/">Adding site search</a>
         </li>
         <li class="x-govuk-side-navigation__section-item">
-          <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/markdown/">Using Markdown</a>
+          <a class="x-govuk-side-navigation__link" href="/markdown/">Using Markdown</a>
         </li>
         <li class="x-govuk-side-navigation__section-item">
-          <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/markdown-advanced/">Advanced Markdown</a>
+          <a class="x-govuk-side-navigation__link" href="/markdown-advanced/">Advanced Markdown</a>
         </li>
         <li class="x-govuk-side-navigation__section-item x-govuk-side-navigation__section-item--current">
-          <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/example-layouts/">Example layouts</a>
+          <a class="x-govuk-side-navigation__link" href="/example-layouts/">Example layouts</a>
             <ul class="x-govuk-side-navigation__section x-govuk-side-navigation__section--nested">
                 <li class="x-govuk-side-navigation__section-item">
-                  <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/example-layouts/page/">Page</a>
+                  <a class="x-govuk-side-navigation__link" href="/example-layouts/page/">Page</a>
                 </li>
                 <li class="x-govuk-side-navigation__section-item">
-                  <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/example-layouts/side-navigation/">Page with side navigation</a>
+                  <a class="x-govuk-side-navigation__link" href="/example-layouts/side-navigation/" aria-current="true">Page with side navigation</a>
                 </li>
                 <li class="x-govuk-side-navigation__section-item">
-                  <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/example-layouts/post/">Post</a>
+                  <a class="x-govuk-side-navigation__link" href="/example-layouts/post/">Post</a>
                 </li>
                 <li class="x-govuk-side-navigation__section-item">
-                  <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/example-layouts/collection/">Collection</a>
+                  <a class="x-govuk-side-navigation__link" href="/example-layouts/collection/">Collection</a>
                 </li>
                 <li class="x-govuk-side-navigation__section-item">
-                  <a class="x-govuk-side-navigation__link" href="/govuk-eleventy-plugin/example-layouts/product/">Product</a>
+                  <a class="x-govuk-side-navigation__link" href="/example-layouts/product/">Product</a>
                 </li>
             </ul>
         </li>
@@ -133,6 +136,7 @@
         <p class="govuk-body">The <code class="x-govuk-code x-govuk-code--inline">side-navigation</code> layout is with navigation on the left side of the page.</p>
 <h2 id="front-matter-properties" tabindex="-1" class="govuk-heading-l"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#front-matter-properties" class="govuk-link">Front matter properties</a></h2>
 <pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--yaml" tabindex="0"><code><span class="x-govuk-code__attr">layout:</span> <span class="x-govuk-code__string">page</span>
+<span class="x-govuk-code__attr">includeInBreadcrumbs:</span> <span class="x-govuk-code__comment"># Show link to page in any breadcrumbs. Default is `false`</span>
 <span class="x-govuk-code__attr">order:</span> <span class="x-govuk-code__comment"># Adjust position of page in side navigation</span>
 <span class="x-govuk-code__attr">title:</span> <span class="x-govuk-code__comment"># Appears at the top of the page and in the &lt;title&gt;</span>
 <span class="x-govuk-code__attr">description:</span> <span class="x-govuk-code__comment"># Appears below page title and in page &lt;meta&gt;</span>
