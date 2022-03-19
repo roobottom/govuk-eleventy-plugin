@@ -7893,6 +7893,30 @@ a:focus .x-govuk-code--inline {
     line-height: 1.15;
   }
 }
+.app-article__body table {
+  display: block;
+  overflow-x: auto;
+  scrollbar-color: #b1b4b6 #f3f2f1;
+}
+.app-article__body table::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+.app-article__body table::-webkit-scrollbar-thumb {
+  background: #b1b4b6;
+}
+.app-article__body table:focus {
+  box-shadow: 0 0 0 9px #0b0c0c, 0 0 0 12px #ffdd00;
+  outline: 6px solid #ffffff;
+}
+.app-article__body table:focus:not(:focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+.app-article__body table:focus-visible {
+  box-shadow: 0 0 0 9px #0b0c0c, 0 0 0 12px #ffdd00;
+  outline: 6px solid #ffffff;
+}
 .app-article__body .x-govuk-code__language--shell {
   background-color: #0b0c0c;
   border: 3px solid #ffffff;
