@@ -6,79 +6,79 @@
     "templateContent": "post layout designed date based content such blog posts news items with optional link related front matter properties layout: includeinbreadcrumbs: # show page any breadcrumbs default `false` order: adjust position side navigation title: appears top &lt title&gt description: below title meta&gt date: see https: www.11ty.dev docs dates image: src: image shown above open graph alt: alternative text caption: caption author: author name authors: names supersedes `author` value name: url: url related: links within sidebar sections: items: text: href: subsections: subsection view source this github",
     "url": "/govuk-eleventy-plugin/layouts/post/"
   },  {
-    "title": "Write documentation using Markdown and publish it using GOV.UK styles",
-"description": "Use this plugin for [Eleventy](https://www.11ty.dev) to spend time writing documentation, not building a website for it.",    "layout": "product",
-    "date": "2022-03-19T02:34:28.024Z",
-    "dateString": "19 March 2022",
-    "templateContent": "layouts choose layout match type content want write learn about using markdown lightweight markup language that can use add formatting elements plaintext text documents options gov.uk eleventy plugin number allow customise appearance your website contribute project repository public welcome contributions from anyone view this github",
-    "url": "/govuk-eleventy-plugin/"
-  },  {
     "title": "Get started",
 "description": "With the GOV.UK Eleventy Plugin, start writing documentation rather than spend time building a website.","section": "GOV.UK Eleventy Plugin",    "layout": "side-navigation",
-    "date": "2022-03-19T02:34:28.024Z",
+    "date": "2022-03-19T02:48:20.403Z",
     "dateString": "19 March 2022",
     "templateContent": "can use this plugin create publish documentation other simple websites users government includes following features: set layouts that govuk frontend components styles uses markdown ensure your pages same typography those used gov.uk support extended syntax full configuration header footer site search requirements node.js v16 eleventy v1.0.0 above node version manager recommended are working across multiple projects different versions installation install both terminal type: npm @11ty save next add .eleventy.js file root directory project configure const govukeleventyplugin = require &#x27 plugin&#x27 module exports function eleventyconfig { register addplugin return datatemplateengine : njk&#x27 htmltemplateengine markdowntemplateengine dir from node_modules app layouts&#x27 } generate type command: npx serve once all files have been generated 2 preview urls will shown either which enter into address bar: 11ty copied 14 wrote 0 1.11 seconds watching… browsersync access urls: local: http: localhost:8080 external: 192.168.178.29:8080 serving from: public whenever new page edit existing one browser automatically refresh with any changes applied first now ready start adding made parts: front matter its contents starts ends written using key value data format called yaml most cases only need bits information: layout title example: homepage: true layout: title: built `govuk plugin` named index.md content should homepage open url see appear choose provides 5 each options provide matter: post   date based collection product side navigation",
     "url": "/govuk-eleventy-plugin/get-started/"
   },  {
-    "title": "Using Markdown",
-"description": "Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents.","section": "GOV.UK Eleventy Plugin",    "layout": "side-navigation",
-    "date": "2022-03-19T02:34:28.024Z",
+    "title": "Write documentation using Markdown and publish it using GOV.UK styles",
+"description": "Use this plugin for [Eleventy](https://www.11ty.dev) to spend time writing documentation, not building a website for it.",    "layout": "product",
+    "date": "2022-03-19T02:48:20.403Z",
     "dateString": "19 March 2022",
-    "templateContent": "contents headings paragraphs line breaks emphasis strong blockquotes with multiple nested other elements lists ordered unordered code spans blocks horizontal rules links urls email addresses formatting images linking typographic replacements create heading add number signs # front word phrase use should correspond level example 3 &lt h3&gt e.g. ### header markdown rendered output 1 ## 2 #### 4 ##### 5 ###### 6 blank separate one more lines text this first paragraph second break new br&gt end spaces then type return emphasise asterisk underscore before after gds style guide recommends against italics transport font provide italic single quotation referring document scheme initiative *emphasised* emphasised _emphasised_ bold asterisks underscores only using emboldened when from interfaces technical documentation instructions **strongly emphasised** strongly __strongly emphasised__ blockquote &gt many forms government have been tried will world sin woe pretends that democracy perfect all wise looks like this: can contain between indeed said worst form except those time want nest formatted used — need experiment see which ones work check mot status vehicle your must get test https: www.gov.uk getting by third anniversary its registration organize items into list numbers followed periods numerical order start item indented dashes * plus + indent nesting different types also vice versa starting period backslash \\ escape 2012\\ great year! think 2009 best 2012 denote enclose backticks ` command prompt `npm install` npm install every block least tab console.log &#x27 hello world!&#x27 'hello world!' syntax highlighting fenced rule *** ___ themselves __ _ identical: link brackets gov.uk follow immediately url parentheses visit quickly turn address angle www.gov.uk&gt mailbox@example.org&gt mailbox@example.org emphasize ** www.markdownguide.org section `code` #code image exclamation mark ! alternative path asset optionally caption marks crown icon above words assets govuk opengraph image.png &quot logo&quot logo apple touch 180x180.png gov.uk&quot description en dash em ellipsis .. … quotes 'single' double double&quot simple fractions ½ ⅓ ⅔ ¼ ¾ multiplication x × greater than =&gt ≥ less = ≤ minus 2.4 ±1 guillemets bonjour!&gt «bonjour!» copyright c © registered trademark r ® tm ™ p",
-    "url": "/govuk-eleventy-plugin/markdown/"
-  },  {
-    "title": "Adding a site search",
-"description": "Make it easier for readers to find content on your site.","section": "GOV.UK Eleventy Plugin",    "layout": "side-navigation",
-    "date": "2022-03-19T02:34:28.024Z",
-    "dateString": "19 March 2022",
-    "templateContent": "gov.uk eleventy plugin makes easy add search functionality your website follow these instructions enable this feature create index site needs pages key words phrases they contain by creating page that uses template: eleventyexcludefromcollections: true layout: permalink: search.json permalink value location generated file sitemap only works javascript available falls back link title: can see example input header values corresponding options header.search example: const govukeleventyplugin = require &#x27 govuk plugin&#x27 module exports function eleventyconfig { addplugin : indexpath search.json&#x27 sitemappath sitemap&#x27 }",
-    "url": "/govuk-eleventy-plugin/search/"
-  },  {
-    "title": "Options",
-"description": "The GOV.UK Eleventy Plugin has a number of options that allow you to customise the appearance of your website.","section": "GOV.UK Eleventy Plugin",    "layout": "side-navigation",
-    "date": "2022-03-19T02:34:28.024Z",
-    "dateString": "19 March 2022",
-    "templateContent": "can add options second parameter addplugin function eleventy config file example product name right gov.uk text header would following: const govukeleventyplugin = require &#x27 govuk plugin&#x27 module exports eleventyconfig { : productname apply juggling licence api docs&#x27 } plugin type description default homekey string label use first item pagination key when referring home page eleventynavigation.parent 'home' parentsite object website show breadcrumbs false parentsite.url url parent site parentsite.name pathprefix your lives different subdirectory particularly useful with github pages specify this used by filter inserted beginning all absolute urls conjunction own option ' where will hosted provide canonical open graph meta data see footer addition available component following also set: homepageurl organisation linked organisationlogo logo that appears left set crown shown royal arms coat 'crown' organisationname 'gov.uk' search header.search adding field 'search site' indexpath path index input sitemappath location sitemap copyright statement contain inline markdown © crown displayed below image current year .e © 2022 'ogl' ogl alongside content under government v3.0 except otherwise stated",
-    "url": "/govuk-eleventy-plugin/options/"
-  },  {
-    "title": "Advanced Markdown",
-"description": "Additional Markdown syntax is supported to ensure pages can contain additional elements like tables, code blocks and footnotes.","section": "GOV.UK Eleventy Plugin",    "layout": "side-navigation",
-    "date": "2022-03-19T02:34:28.024Z",
-    "dateString": "19 March 2022",
-    "templateContent": "contents tables alignment fenced code syntax highlighting footnotes abbreviations acronyms definition lists task strike through highlighted text inserted subscript superscript add table use 3 more hyphens create each header pipes | separate column description title paragraph rendered output looks like this: cell widths can vary shown below will look same align columns left right center by adding colon : both side within row test here&#x27 s this basic markdown allows blocks indenting lines 4 spaces one tab find that inconvenient try using backticks ``` tildes ~~~ before after block { &quot firstname&quot john&quot lastname&quot smith&quot age&quot 25 } feature color whatever language your written specify next ```json allow notes references without cluttering body document when footnote number with link appears where added reference readers click jump content bottom page caret identifier inside brackets ^1 identifiers numbers words they contain tabs only correlate itself — are numbered sequentially another have put end them anywhere except other elements quotes simple longer one. ^bignote first multiple paragraphs indent include `{ }` many 1 2 time abbreviation acronym explain full unless well known uk dvla us eu vat mp includes government departments schemes then refer initials explanation available hover asterisk followed around * uc universal credit policy responsibility dwp department work pensions list type term line space second currently supported items checkboxes checkbox start item show selected x between write press release update website contact media putting horizontal result indicate certain mistake meant inclusion tilde symbols ~~ world flat.~~ now know round flat highlight equal signs == need these ==very important words== very plus ++ alongside though ~~remove~~ ++insert++ word remove insert symbol ~ characters h~2~o h o ^ x^2^ ↩︎",
-    "url": "/govuk-eleventy-plugin/markdown-advanced/"
-  },  {
-    "title": "Collection",
-"description": "A collection of pages.","section": "Layouts",    "layout": "collection",
-    "date": "2022-03-19T02:34:28.024Z",
-    "dateString": "19 March 2022",
-    "templateContent": "collection layout designed listing documents front matter properties layout: includeinbreadcrumbs: # show link page any breadcrumbs default `false` order: adjust position side navigation title: appears top &lt title&gt description: below title meta&gt collection: name pagination: required see https: www.11ty.dev docs pagination data: size: number items each related: related links within sidebar sections: items: text: href: url subsections: subsection view source this github",
-    "url": "/govuk-eleventy-plugin/layouts/collection/"
+    "templateContent": "layouts choose layout match type content want write learn about using markdown lightweight markup language that can use add formatting elements plaintext text documents options gov.uk eleventy plugin number allow customise appearance your website contribute project repository public welcome contributions from anyone view this github",
+    "url": "/govuk-eleventy-plugin/"
   },  {
     "title": "Layouts",
 "description": "Choose a layout to match the type of content you want write.","section": "GOV.UK Eleventy Plugin",    "layout": "side-navigation",
-    "date": "2022-03-19T02:34:28.024Z",
+    "date": "2022-03-19T02:48:20.403Z",
     "dateString": "19 March 2022",
     "templateContent": "post   date based collection pages page simple product with side navigation overriding layouts are registered eleventy by setting dir.layouts key point layout files installed package directory: const govukeleventyplugin = require &#x27 govuk plugin&#x27 module exports function eleventyconfig { addplugin return datatemplateengine : njk&#x27 htmltemplateengine markdowntemplateengine dir node_modules plugin app layouts&#x27 } want use your own remove this value set dir.includes optionally can provided basis example show notification banner top extend layout: {# loaded from &quot layouts&quot #} {% extends page.njk&quot %} load any gov.uk frontend components macro.njk&quot import govuknotificationbanner block content templates include front matter data {{ text: last reviewed + | d llll y&quot needs again reviewagain .&quot }} call apparticle header: title: title noorphans endcall endblock",
     "url": "/govuk-eleventy-plugin/layouts/"
   },  {
+    "title": "Advanced Markdown",
+"description": "Additional Markdown syntax is supported to ensure pages can contain additional elements like tables, code blocks and footnotes.","section": "GOV.UK Eleventy Plugin",    "layout": "side-navigation",
+    "date": "2022-03-19T02:48:20.403Z",
+    "dateString": "19 March 2022",
+    "templateContent": "contents tables alignment fenced code syntax highlighting footnotes abbreviations acronyms definition lists task strike through highlighted text inserted subscript superscript add table use 3 more hyphens create each header pipes | separate column description title paragraph rendered output looks like this: cell widths can vary shown below will look same align columns left right center by adding colon : both side within row test here&#x27 s this basic markdown allows blocks indenting lines 4 spaces one tab find that inconvenient try using backticks ``` tildes ~~~ before after block { &quot firstname&quot john&quot lastname&quot smith&quot age&quot 25 } feature color whatever language your written specify next ```json allow notes references without cluttering body document when footnote number with link appears where added reference readers click jump content bottom page caret identifier inside brackets ^1 identifiers numbers words they contain tabs only correlate itself — are numbered sequentially another have put end them anywhere except other elements quotes simple longer one. ^bignote first multiple paragraphs indent include `{ }` many 1 2 time abbreviation acronym explain full unless well known uk dvla us eu vat mp includes government departments schemes then refer initials explanation available hover asterisk followed around * uc universal credit policy responsibility dwp department work pensions list type term line space second currently supported items checkboxes checkbox start item show selected x between write press release update website contact media putting horizontal result indicate certain mistake meant inclusion tilde symbols ~~ world flat.~~ now know round flat highlight equal signs == need these ==very important words== very plus ++ alongside though ~~remove~~ ++insert++ word remove insert symbol ~ characters h~2~o h o ^ x^2^ ↩︎",
+    "url": "/govuk-eleventy-plugin/markdown-advanced/"
+  },  {
+    "title": "Using Markdown",
+"description": "Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents.","section": "GOV.UK Eleventy Plugin",    "layout": "side-navigation",
+    "date": "2022-03-19T02:48:20.403Z",
+    "dateString": "19 March 2022",
+    "templateContent": "contents headings paragraphs line breaks emphasis strong blockquotes with multiple nested other elements lists ordered unordered code spans blocks horizontal rules links urls email addresses formatting images linking typographic replacements create heading add number signs # front word phrase use should correspond level example 3 &lt h3&gt e.g. ### header markdown rendered output 1 ## 2 #### 4 ##### 5 ###### 6 blank separate one more lines text this first paragraph second break new br&gt end spaces then type return emphasise asterisk underscore before after gds style guide recommends against italics transport font provide italic single quotation referring document scheme initiative *emphasised* emphasised _emphasised_ bold asterisks underscores only using emboldened when from interfaces technical documentation instructions **strongly emphasised** strongly __strongly emphasised__ blockquote &gt many forms government have been tried will world sin woe pretends that democracy perfect all wise looks like this: can contain between indeed said worst form except those time want nest formatted used — need experiment see which ones work check mot status vehicle your must get test https: www.gov.uk getting by third anniversary its registration organize items into list numbers followed periods numerical order start item indented dashes * plus + indent nesting different types also vice versa starting period backslash \\ escape 2012\\ great year! think 2009 best 2012 denote enclose backticks ` command prompt `npm install` npm install every block least tab console.log &#x27 hello world!&#x27 'hello world!' syntax highlighting fenced rule *** ___ themselves __ _ identical: link brackets gov.uk follow immediately url parentheses visit quickly turn address angle www.gov.uk&gt mailbox@example.org&gt mailbox@example.org emphasize ** www.markdownguide.org section `code` #code image exclamation mark ! alternative path asset optionally caption marks crown icon above words assets govuk opengraph image.png &quot logo&quot logo apple touch 180x180.png gov.uk&quot description en dash em ellipsis .. … quotes 'single' double double&quot simple fractions ½ ⅓ ⅔ ¼ ¾ multiplication x × greater than =&gt ≥ less = ≤ minus 2.4 ±1 guillemets bonjour!&gt «bonjour!» copyright c © registered trademark r ® tm ™ p",
+    "url": "/govuk-eleventy-plugin/markdown/"
+  },  {
+    "title": "Options",
+"description": "The GOV.UK Eleventy Plugin has a number of options that allow you to customise the appearance of your website.","section": "GOV.UK Eleventy Plugin",    "layout": "side-navigation",
+    "date": "2022-03-19T02:48:20.403Z",
+    "dateString": "19 March 2022",
+    "templateContent": "can add options second parameter addplugin function eleventy config file example product name right gov.uk text header would following: const govukeleventyplugin = require &#x27 govuk plugin&#x27 module exports eleventyconfig { : productname apply juggling licence api docs&#x27 } plugin type description default homekey string label use first item pagination key when referring home page eleventynavigation.parent 'home' parentsite object website show breadcrumbs false parentsite.url url parent site parentsite.name pathprefix your lives different subdirectory particularly useful with github pages specify this used by filter inserted beginning all absolute urls conjunction own option ' stylesheets array additional load after application styles where will hosted provide canonical open graph meta data see footer addition available component following also set: homepageurl organisation linked organisationlogo logo that appears left set crown shown royal arms coat 'crown' organisationname 'gov.uk' search header.search adding field 'search site' indexpath path index input sitemappath location sitemap copyright statement contain inline markdown © crown displayed below image current year .e © 2022 'ogl' ogl alongside content under government v3.0 except otherwise stated",
+    "url": "/govuk-eleventy-plugin/options/"
+  },  {
+    "title": "Adding a site search",
+"description": "Make it easier for readers to find content on your site.","section": "GOV.UK Eleventy Plugin",    "layout": "side-navigation",
+    "date": "2022-03-19T02:48:20.403Z",
+    "dateString": "19 March 2022",
+    "templateContent": "gov.uk eleventy plugin makes easy add search functionality your website follow these instructions enable this feature create index site needs pages key words phrases they contain by creating page that uses template: eleventyexcludefromcollections: true layout: permalink: search.json permalink value location generated file sitemap only works javascript available falls back link title: can see example input header values corresponding options header.search example: const govukeleventyplugin = require &#x27 govuk plugin&#x27 module exports function eleventyconfig { addplugin : indexpath search.json&#x27 sitemappath sitemap&#x27 }",
+    "url": "/govuk-eleventy-plugin/search/"
+  },  {
+    "title": "Collection",
+"description": "A collection of pages.","section": "Layouts",    "layout": "collection",
+    "date": "2022-03-19T02:48:20.403Z",
+    "dateString": "19 March 2022",
+    "templateContent": "collection layout designed listing documents front matter properties layout: includeinbreadcrumbs: # show link page any breadcrumbs default `false` order: adjust position side navigation title: appears top &lt title&gt description: below title meta&gt collection: name pagination: required see https: www.11ty.dev docs pagination data: size: number items each related: related links within sidebar sections: items: text: href: url subsections: subsection view source this github",
+    "url": "/govuk-eleventy-plugin/layouts/collection/"
+  },  {
     "title": "Page",
 "description": "A simple page.","section": "Layouts",    "layout": "page",
-    "date": "2022-03-19T02:34:28.024Z",
+    "date": "2022-03-19T02:48:20.403Z",
     "dateString": "19 March 2022",
     "templateContent": "page layout simplest layouts available designed allow maximum flexibility type content front matter properties layout: includeinbreadcrumbs: # show link any breadcrumbs default `false` order: adjust position side navigation title: appears top &lt title&gt description: below title meta&gt related: related links sections: items: text: href: url subsections: subsection view source this github",
     "url": "/govuk-eleventy-plugin/layouts/page/"
   },  {
     "title": "Product",
 "description": "A product page.","section": "Layouts",    "layout": "product",
-    "date": "2022-03-19T02:34:28.024Z",
+    "date": "2022-03-19T02:48:20.403Z",
     "dateString": "19 March 2022",
     "templateContent": "product layout designed home pages based page example front matter properties layout: includeinbreadcrumbs: # show link any breadcrumbs default `false` order: adjust position side navigation title: appears top &lt title&gt description: below title meta&gt startbutton: optional text: label start button href: image: src: image source path hero alt: textual alternative related: related links content sections: items: url subsections: subsection view this github",
     "url": "/govuk-eleventy-plugin/layouts/product/"
   },  {
     "title": "Page with side navigation",
 "description": "A page with side navigation.","section": "Layouts",    "layout": "side-navigation",
-    "date": "2022-03-19T02:34:28.024Z",
+    "date": "2022-03-19T02:48:20.403Z",
     "dateString": "19 March 2022",
     "templateContent": "side navigation layout with left page front matter properties layout: includeinbreadcrumbs: # show link any breadcrumbs default `false` order: adjust position title: appears top &lt title&gt description: below title meta&gt related: related links content sections: items: text: href: url subsections: subsection view source this github",
     "url": "/govuk-eleventy-plugin/layouts/side-navigation/"
