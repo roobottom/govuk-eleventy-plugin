@@ -2,7 +2,7 @@
 <html lang="en" class="govuk-template no-js">
   <head>
     <meta charset="utf-8">
-    <title>Adding a site search - Eleventy Plugin - X-GOVUK</title>
+    <title>Layouts - Eleventy Plugin - X-GOVUK</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0b0c0c"> 
     
@@ -18,8 +18,8 @@
   <link rel="stylesheet" href="/govuk-eleventy-plugin/assets/govuk.css">
 
   <meta property="og:url" content="https://x-govuk.github.io/govuk-eleventy-plugin/">
-  <meta property="og:title" content="Adding a site search">
-<meta property="og:description" name="description" content="Make it easier for readers to find content on your site.">    
+  <meta property="og:title" content="Layouts">
+<meta property="og:description" name="description" content="Choose a layout to match the type of content you want write.">    
     
     <meta property="og:image" content="/assets/images/govuk-opengraph-image.png">
   </head>
@@ -80,11 +80,28 @@
         <li class="x-govuk-side-navigation__section-item">
           <a class="x-govuk-side-navigation__link" href="/options/">Options</a>
         </li>
-        <li class="x-govuk-side-navigation__section-item">
-          <a class="x-govuk-side-navigation__link" href="/layouts/">Layouts</a>
-        </li>
         <li class="x-govuk-side-navigation__section-item x-govuk-side-navigation__section-item--current">
-          <a class="x-govuk-side-navigation__link" href="/search/" aria-current="true">Adding a site search</a>
+          <a class="x-govuk-side-navigation__link" href="/layouts/" aria-current="true">Layouts</a>
+            <ul class="x-govuk-side-navigation__section x-govuk-side-navigation__section--nested">
+                <li class="x-govuk-side-navigation__section-item">
+                  <a class="x-govuk-side-navigation__link" href="/layouts/page/">Page</a>
+                </li>
+                <li class="x-govuk-side-navigation__section-item">
+                  <a class="x-govuk-side-navigation__link" href="/layouts/side-navigation/">Page with side navigation</a>
+                </li>
+                <li class="x-govuk-side-navigation__section-item">
+                  <a class="x-govuk-side-navigation__link" href="/layouts/post/">Post</a>
+                </li>
+                <li class="x-govuk-side-navigation__section-item">
+                  <a class="x-govuk-side-navigation__link" href="/layouts/collection/">Collection</a>
+                </li>
+                <li class="x-govuk-side-navigation__section-item">
+                  <a class="x-govuk-side-navigation__link" href="/layouts/product/">Product</a>
+                </li>
+            </ul>
+        </li>
+        <li class="x-govuk-side-navigation__section-item">
+          <a class="x-govuk-side-navigation__link" href="/search/">Adding a site search</a>
         </li>
         <li class="x-govuk-side-navigation__section-item">
           <a class="x-govuk-side-navigation__link" href="/markdown/">Using Markdown</a>
@@ -100,54 +117,63 @@
 <article class="app-article">
   <header class="app-article__header">
     <h1 class="app-article__title govuk-heading-xl">
-      Adding a site search
+      Layouts
     </h1>
       <div class="govuk-body-l">
-        Make it easier for readers to find content on your site.
+        Choose a layout to match the type of content you want write.
       </div>
   </header>
 
 
   <div class="app-article__body">
-        <p class="govuk-body">The GOV.UK Eleventy Plugin makes it easy to add search functionality to your website. Follow these instructions to enable this feature.</p>
-<h2 id="create-a-search-index" tabindex="-1" class="govuk-heading-l"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#create-a-search-index" class="govuk-link">Create a search index</a></h2>
-<p class="govuk-body">The site search needs an index of your pages and the key words and phrases they contain.</p>
-<p class="govuk-body">Create the search index by creating a page that uses the <code class="x-govuk-code x-govuk-code--inline">search-index</code> template:</p>
-<pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--yaml" tabindex="0"><code><span class="x-govuk-code__meta">---</span>
-<span class="x-govuk-code__attr">eleventyExcludeFromCollections:</span> <span class="x-govuk-code__literal">true</span>
-<span class="x-govuk-code__attr">layout:</span> <span class="x-govuk-code__string">search-index</span>
-<span class="x-govuk-code__attr">permalink:</span> <span class="x-govuk-code__string">/search.json</span>
-<span class="x-govuk-code__meta">---
-</span></code></pre>
-
-<p class="govuk-body">The <code class="x-govuk-code x-govuk-code--inline">permalink</code> value is the location of the generated file.</p>
-<h2 id="create-a-sitemap" tabindex="-1" class="govuk-heading-l"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#create-a-sitemap" class="govuk-link">Create a sitemap</a></h2>
-<p class="govuk-body">The search feature only works if JavaScript is available, but falls back to a link to a sitemap.</p>
-<p class="govuk-body">Create the search index by creating a page that uses the <code class="x-govuk-code x-govuk-code--inline">sitemap</code> template:</p>
-<pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--yaml" tabindex="0"><code><span class="x-govuk-code__meta">---</span>
-<span class="x-govuk-code__attr">eleventyExcludeFromCollections:</span> <span class="x-govuk-code__literal">true</span>
-<span class="x-govuk-code__attr">layout:</span> <span class="x-govuk-code__string">sitemap</span>
-<span class="x-govuk-code__attr">title:</span> <span class="x-govuk-code__string">Sitemap</span>
-<span class="x-govuk-code__attr">permalink:</span> <span class="x-govuk-code__string">/sitemap</span>
-<span class="x-govuk-code__meta">---
-</span></code></pre>
-
-<p class="govuk-body">You can see an <a href="/sitemap" class="govuk-link">example of a sitemap</a> on this website.</p>
-<h2 id="add-a-search-input-to-the-site-header" tabindex="-1" class="govuk-heading-l"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#add-a-search-input-to-the-site-header" class="govuk-link">Add a search input to the site header</a></h2>
-<p class="govuk-body">Add the <code class="x-govuk-code x-govuk-code--inline">permalink</code> values to the corresponding plugin options for <code class="x-govuk-code x-govuk-code--inline">header.search</code>. For example:</p>
+        <ul class="govuk-list govuk-list--bullet">
+<li><a href="/govuk-eleventy-plugin/layouts/post/" class="govuk-link">Post</a> – A date-based post.</li>
+<li><a href="/govuk-eleventy-plugin/layouts/collection/" class="govuk-link">Collection</a> – A collection of pages.</li>
+<li><a href="/govuk-eleventy-plugin/layouts/page/" class="govuk-link">Page</a> – A simple page.</li>
+<li><a href="/govuk-eleventy-plugin/layouts/product/" class="govuk-link">Product</a> – A product page.</li>
+<li><a href="/govuk-eleventy-plugin/layouts/side-navigation/" class="govuk-link">Page with side navigation</a> – A page with side navigation.</li>
+</ul>
+<h2 id="overriding-layouts" tabindex="-1" class="govuk-heading-l"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#overriding-layouts" class="govuk-link">Overriding layouts</a></h2>
+<p class="govuk-body">Layouts are registered with Eleventy by setting the <code class="x-govuk-code x-govuk-code--inline">dir.layouts</code> key to point to layout files in the installed package directory:</p>
 <pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--js" tabindex="0"><code><span class="x-govuk-code__keyword">const</span> govukEleventyPlugin = <span class="x-govuk-code__built_in">require</span>(<span class="x-govuk-code__string">&#x27;govuk-eleventy-plugin&#x27;</span>)
 
 <span class="x-govuk-code__variable language_">module</span>.<span class="x-govuk-code__property">exports</span> = <span class="x-govuk-code__keyword">function</span>(<span class="x-govuk-code__params">eleventyConfig</span>) {
-  eleventyConfig.<span class="x-govuk-code__title function_">addPlugin</span>(govukEleventyPlugin, {
-    <span class="x-govuk-code__attr">header</span>: {
-      <span class="x-govuk-code__attr">search</span>: {
-        <span class="x-govuk-code__attr">indexPath</span>: <span class="x-govuk-code__string">&#x27;/search.json&#x27;</span>,
-        <span class="x-govuk-code__attr">sitemapPath</span>: <span class="x-govuk-code__string">&#x27;/sitemap&#x27;</span>
-      }
+  eleventyConfig.<span class="x-govuk-code__title function_">addPlugin</span>(govukEleventyPlugin)
+
+  <span class="x-govuk-code__keyword">return</span> {
+    <span class="x-govuk-code__attr">dataTemplateEngine</span>: <span class="x-govuk-code__string">&#x27;njk&#x27;</span>,
+    <span class="x-govuk-code__attr">htmlTemplateEngine</span>: <span class="x-govuk-code__string">&#x27;njk&#x27;</span>,
+    <span class="x-govuk-code__attr">markdownTemplateEngine</span>: <span class="x-govuk-code__string">&#x27;njk&#x27;</span>,
+    <span class="x-govuk-code__attr">dir</span>: {
+      <span class="x-govuk-code__attr">layouts</span>: <span class="x-govuk-code__string">&#x27;node_modules/govuk-eleventy-plugin/app/layouts&#x27;</span>
     }
-  })
-}
+  }
+};
 </code></pre>
+
+<p class="govuk-body">If you want to use your own layouts, remove this value and set a value for <a href="https://www.11ty.dev/docs/config/#directory-for-includes" class="govuk-link"><code class="x-govuk-code x-govuk-code--inline">dir.includes</code></a> (and optionally <a href="https://www.11ty.dev/docs/config/#directory-for-layouts-(optional)" class="govuk-link"><code class="x-govuk-code x-govuk-code--inline">dir.layouts</code></a>).</p>
+<p class="govuk-body">You can use layouts provided by this plugin as a basis for your own. For example, to show a notification banner at the top of a page, extend the <code class="x-govuk-code x-govuk-code--inline">page</code> layout:</p>
+<pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--njk" tabindex="0"><code><span class="x-govuk-code__comment">{# Plugin layouts can be loaded from &quot;app/layouts&quot; #}</span><span class="language-xml">
+</span><span class="x-govuk-code__template-tag">{%</span> <span class="x-govuk-code__name">extends</span> <span class="x-govuk-code__string">&quot;app/layouts/page.njk&quot;</span> <span class="x-govuk-code__template-tag">%}</span><span class="language-xml">
+
+</span><span class="x-govuk-code__comment">{# Load any GOV.UK Frontend components #}</span><span class="language-xml">
+</span><span class="x-govuk-code__template-tag">{%</span> <span class="x-govuk-code__name">from</span> <span class="x-govuk-code__string">&quot;govuk/components/notification-banner/macro.njk&quot;</span> import govukNotificationBanner <span class="x-govuk-code__template-tag">%}</span><span class="language-xml">
+
+</span><span class="x-govuk-code__template-tag">{%</span> <span class="x-govuk-code__name">block</span> content <span class="x-govuk-code__template-tag">%}</span><span class="language-xml">
+  </span><span class="x-govuk-code__template-variable">{{ govukNotificationBanner({
+    text: <span class="x-govuk-code__string">&quot;This page was last reviewed on &quot;</span> + (reviewed | <span class="x-govuk-code__name">date</span>(<span class="x-govuk-code__string">&quot;d LLLL y&quot;</span>)) + <span class="x-govuk-code__string">&quot;.  
+    It needs to be reviewed again on &quot;</span> + (reviewedAgain | <span class="x-govuk-code__name">date</span>(<span class="x-govuk-code__string">&quot;d LLLL y&quot;</span>)) + <span class="x-govuk-code__string">&quot;.&quot;</span>
+  }) }}</span><span class="language-xml">
+
+  </span><span class="x-govuk-code__template-tag">{%</span> <span class="x-govuk-code__name">call</span> appArticle({
+    header: {
+      title: title | noOrphans
+    }
+  }) <span class="x-govuk-code__template-tag">%}</span><span class="language-xml">
+    </span><span class="x-govuk-code__template-variable">{{ content }}</span><span class="language-xml">
+  </span><span class="x-govuk-code__template-tag">{%</span> <span class="x-govuk-code__name">endcall</span> <span class="x-govuk-code__template-tag">%}</span><span class="language-xml">
+</span><span class="x-govuk-code__template-tag">{%</span> <span class="x-govuk-code__name">endblock</span> <span class="x-govuk-code__template-tag">%}</span><span class="language-xml">
+</span></code></pre>
 
 
 </div>
