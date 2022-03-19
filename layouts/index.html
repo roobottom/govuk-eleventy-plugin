@@ -134,7 +134,7 @@
 <li><a href="/govuk-eleventy-plugin/layouts/side-navigation/" class="govuk-link">Page with side navigation</a> – A page with side navigation.</li>
 </ul>
 <h2 id="overriding-layouts" tabindex="-1" class="govuk-heading-l"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#overriding-layouts" class="govuk-link">Overriding layouts</a></h2>
-<p class="govuk-body">Layouts are registered with Eleventy by setting the <code class="x-govuk-code x-govuk-code--inline">dir.layouts</code> key to point to layout files in the installed package directory:</p>
+<p class="govuk-body">Layouts are registered with Eleventy by setting the <code class="x-govuk-code x-govuk-code--inline">dir.layouts</code> key to point to the layout files installed in the package directory:</p>
 <pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--js" tabindex="0"><code><span class="x-govuk-code__keyword">const</span> govukEleventyPlugin = <span class="x-govuk-code__built_in">require</span>(<span class="x-govuk-code__string">&#x27;govuk-eleventy-plugin&#x27;</span>)
 
 <span class="x-govuk-code__variable language_">module</span>.<span class="x-govuk-code__property">exports</span> = <span class="x-govuk-code__keyword">function</span>(<span class="x-govuk-code__params">eleventyConfig</span>) {
@@ -160,10 +160,11 @@
 </span><span class="x-govuk-code__template-tag">{%</span> <span class="x-govuk-code__name">from</span> <span class="x-govuk-code__string">&quot;govuk/components/notification-banner/macro.njk&quot;</span> import govukNotificationBanner <span class="x-govuk-code__template-tag">%}</span><span class="language-xml">
 
 </span><span class="x-govuk-code__template-tag">{%</span> <span class="x-govuk-code__name">block</span> content <span class="x-govuk-code__template-tag">%}</span><span class="language-xml">
+  </span><span class="x-govuk-code__comment">{# Templates can include front matter data #}</span><span class="language-xml">
   </span><span class="x-govuk-code__template-variable">{{ govukNotificationBanner({
     text: <span class="x-govuk-code__string">&quot;This page was last reviewed on &quot;</span> + (reviewed | <span class="x-govuk-code__name">date</span>(<span class="x-govuk-code__string">&quot;d LLLL y&quot;</span>)) + <span class="x-govuk-code__string">&quot;.  
-    It needs to be reviewed again on &quot;</span> + (reviewedAgain | <span class="x-govuk-code__name">date</span>(<span class="x-govuk-code__string">&quot;d LLLL y&quot;</span>)) + <span class="x-govuk-code__string">&quot;.&quot;</span>
-  }) }}</span><span class="language-xml">
+    It needs to be reviewed again on &quot;</span> + (reviewAgain | <span class="x-govuk-code__name">date</span>(<span class="x-govuk-code__string">&quot;d LLLL y&quot;</span>)) + <span class="x-govuk-code__string">&quot;.&quot;</span>
+  }) if reviewed and reviewAgain }}</span><span class="language-xml">
 
   </span><span class="x-govuk-code__template-tag">{%</span> <span class="x-govuk-code__name">call</span> appArticle({
     header: {

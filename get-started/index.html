@@ -179,13 +179,14 @@
 <p class="govuk-body">Pages are made up of 2 parts: a front matter and its contents.</p>
 <p class="govuk-body">A front matter starts and ends with <code class="x-govuk-code x-govuk-code--inline">---</code> and is written using a key/value data format called YAML. In most cases, you will only need 2 bits of information: <code class="x-govuk-code x-govuk-code--inline">layout</code> and <code class="x-govuk-code x-govuk-code--inline">title</code>. For example:</p>
 <pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--yaml" tabindex="0"><code><span class="x-govuk-code__meta">---</span>
+<span class="x-govuk-code__attr">homepage:</span> <span class="x-govuk-code__literal">true</span>
 <span class="x-govuk-code__attr">layout:</span> <span class="x-govuk-code__string">page</span>
 <span class="x-govuk-code__attr">title:</span> <span class="x-govuk-code__string">My</span> <span class="x-govuk-code__string">first</span> <span class="x-govuk-code__string">page</span>
 <span class="x-govuk-code__meta">---</span>
 <span class="x-govuk-code__string">This</span> <span class="x-govuk-code__string">is</span> <span class="x-govuk-code__string">my</span> <span class="x-govuk-code__string">first</span> <span class="x-govuk-code__string">page,</span> <span class="x-govuk-code__string">built</span> <span class="x-govuk-code__string">using</span> <span class="x-govuk-code__string">Eleventy</span> <span class="x-govuk-code__string">and</span> <span class="x-govuk-code__string">`govuk-eleventy-plugin`.</span>
 </code></pre>
 
-<p class="govuk-body">Create a file named <code class="x-govuk-code x-govuk-code--inline">index.md</code> file to the root directory of your project, and add the above content.</p>
+<p class="govuk-body">Create a file named <code class="x-govuk-code x-govuk-code--inline">index.md</code> file to the root directory of your project, and add the above content. Only one page in your site should have a <code class="x-govuk-code x-govuk-code--inline">homepage</code> value set to <code class="x-govuk-code x-govuk-code--inline">true</code>.</p>
 <p class="govuk-body">Open the preview URL in your browser to see this new page appear using GOV.UK styles.</p>
 <h2 id="choose-a-layout" tabindex="-1" class="govuk-heading-l"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#choose-a-layout" class="govuk-link">Choose a layout</a></h2>
 <p class="govuk-body">This plugin provides 5 different layouts, each with different options you can provide in the front matter:</p>
