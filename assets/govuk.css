@@ -8127,6 +8127,9 @@ a:focus .x-govuk-code--inline {
     line-height: 1.15;
   }
 }
+.app-definition-list dd + dt {
+  margin-top: 20px;
+}
 .app-definition-list dd {
   margin-left: 25px;
 }
